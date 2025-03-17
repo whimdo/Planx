@@ -1,0 +1,237 @@
+2025-03-10 07:51:19,755 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:19,755 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:51:19,756 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:19,860 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:51:19,860 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:51:19,870 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:19,871 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:51:19,871 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:19,975 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:51:19,976 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:51:19,978 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('keywords-to-vectors',)
+2025-03-10 07:51:19,979 - __main__ - INFO - Loading Word2Vec model...
+2025-03-10 07:51:19,980 - gensim.models.keyedvectors - INFO - loading projection weights from /home/intern/public/GoogleNews-vectors-negative300.bin.gz
+2025-03-10 07:52:25,741 - gensim.utils - INFO - KeyedVectors lifecycle event {'msg': 'loaded (3000000, 300) matrix of type float32 from /home/intern/public/GoogleNews-vectors-negative300.bin.gz', 'binary': True, 'encoding': 'utf8', 'datetime': '2025-03-10T07:52:25.427191', 'gensim': '4.3.3', 'python': '3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', 'platform': 'Linux-5.4.0-208-generic-x86_64-with-glibc2.31', 'event': 'load_word2vec_format'}
+2025-03-10 07:52:25,742 - __main__ - INFO - Word2Vec model loaded successfully
+2025-03-10 07:52:26,019 - __main__ - INFO - Starting Kafka consumer for topic: keywords-to-vectors
+2025-03-10 07:52:26,019 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:52:26,025 - kafka.cluster - INFO - Group coordinator for vector_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:52:26,026 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group vector_processing_group
+2025-03-10 07:52:26,028 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:52:26,029 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group vector_processing_group
+2025-03-10 07:52:26,040 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+INFO:     Started server process [395794]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9002 (Press CTRL+C to quit)
+2025-03-10 07:52:26,142 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:52:26,143 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:52:26,245 - kafka.coordinator - INFO - (Re-)joining group vector_processing_group
+2025-03-10 07:52:26,250 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:52:26,252 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:52:26,254 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:52:26,255 - kafka.coordinator - INFO - Successfully joined group vector_processing_group with generation 19
+2025-03-10 07:52:26,256 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='keywords-to-vectors', partition=0)]
+2025-03-10 07:52:26,257 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='keywords-to-vectors', partition=0)} for group vector_processing_group
+2025-03-10 07:52:26,366 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=1HrmXnGiV9SVOpfy
+2025-03-10 07:52:26,375 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=1HrmXnGiV9SVOpfy, blocks=1
+2025-03-10 07:52:26,376 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=4oEMcTy8EuJrROP0
+2025-03-10 07:52:26,377 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:52:26,378 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:52:26,379 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:52:26,391 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=4oEMcTy8EuJrROP0, blocks=4
+2025-03-10 07:52:26,392 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=1i4pT05sXWEPSoUa
+2025-03-10 07:52:26,398 - __main__ - WARNING - No keywords found in Word2Vec model for block 4: ['lki16372']
+2025-03-10 07:52:26,415 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=1i4pT05sXWEPSoUa, blocks=1
+2025-03-10 07:53:01,267 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=50Tmg8itWURtS06i
+2025-03-10 07:53:01,280 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=50Tmg8itWURtS06i, blocks=4
+2025-03-10 07:53:13,258 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3wvvCWrcvOejt8Tb
+2025-03-10 07:53:13,263 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3wvvCWrcvOejt8Tb, blocks=1
+2025-03-10 07:53:17,822 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5hYyg6cijXWZZUCg
+2025-03-10 07:53:17,825 - __main__ - WARNING - Not enough vectors (1) to compute similarity stats
+2025-03-10 07:53:17,832 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5hYyg6cijXWZZUCg, blocks=4
+2025-03-10 07:53:23,134 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=26FQ0VLWjDkTd3Ux
+2025-03-10 07:53:23,146 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=26FQ0VLWjDkTd3Ux, blocks=4
+2025-03-10 07:53:31,474 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=70Y093nLCMn02NPB
+2025-03-10 07:53:31,483 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=70Y093nLCMn02NPB, blocks=1
+2025-03-10 07:53:36,410 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3j8vnWFofDjFJT2h
+2025-03-10 07:53:36,414 - __main__ - WARNING - Not enough vectors (1) to compute similarity stats
+2025-03-10 07:53:36,416 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3j8vnWFofDjFJT2h, blocks=2
+2025-03-10 07:53:43,826 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6TVPgqlZZ3NSjZd6
+2025-03-10 07:53:43,831 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6TVPgqlZZ3NSjZd6, blocks=1
+2025-03-10 07:53:49,913 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5S6prEDxDZo0nnpg
+2025-03-10 07:53:49,920 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5S6prEDxDZo0nnpg, blocks=2
+2025-03-10 07:53:54,559 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2uyBus7Sncm4x4DW
+2025-03-10 07:53:54,570 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2uyBus7Sncm4x4DW, blocks=3
+2025-03-10 07:54:05,706 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7KtFqy2dbx9jtk3b
+2025-03-10 07:54:05,718 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7KtFqy2dbx9jtk3b, blocks=4
+2025-03-10 07:54:10,049 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=59pQWV9IbYD65TMP
+2025-03-10 07:54:10,062 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=59pQWV9IbYD65TMP, blocks=4
+2025-03-10 07:54:14,777 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=76GW79ybbswe3PKM
+2025-03-10 07:54:14,789 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=76GW79ybbswe3PKM, blocks=4
+2025-03-10 07:54:20,553 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7EkXpf97hlpZmu2K
+2025-03-10 07:54:20,566 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7EkXpf97hlpZmu2K, blocks=4
+2025-03-10 07:54:25,169 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=qzdF55F2Hjo95nMl
+2025-03-10 07:54:25,182 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=qzdF55F2Hjo95nMl, blocks=4
+2025-03-10 07:54:31,360 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=18h3MgsjO1sD7UhW
+2025-03-10 07:54:31,370 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=18h3MgsjO1sD7UhW, blocks=3
+2025-03-10 07:54:36,852 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2YBAeE8rYPJCLFgT
+2025-03-10 07:54:36,860 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2YBAeE8rYPJCLFgT, blocks=2
+2025-03-10 07:54:44,638 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3U97C40XhwCaNqKg
+2025-03-10 07:54:44,647 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3U97C40XhwCaNqKg, blocks=3
+2025-03-10 07:54:53,357 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6mS1pKgkQSl2QgMZ
+2025-03-10 07:54:53,365 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6mS1pKgkQSl2QgMZ, blocks=2
+2025-03-10 07:54:59,899 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3RnyQ2MYscs75PRO
+2025-03-10 07:54:59,915 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3RnyQ2MYscs75PRO, blocks=5
+2025-03-10 07:55:07,948 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3vskupw2lnWlNeHV
+2025-03-10 07:55:07,953 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3vskupw2lnWlNeHV, blocks=1
+2025-03-10 07:55:24,929 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7iWTs8E1xN5cVqTH
+2025-03-10 07:55:24,936 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7iWTs8E1xN5cVqTH, blocks=2
+2025-03-10 07:55:29,829 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5gqbkWRMzD3SsWhM
+2025-03-10 07:55:29,842 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5gqbkWRMzD3SsWhM, blocks=4
+2025-03-10 07:55:34,485 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5weqd0oRfX95gkrn
+2025-03-10 07:55:34,498 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5weqd0oRfX95gkrn, blocks=4
+2025-03-10 07:55:51,386 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7DL6IzxQTuZKIbkV
+2025-03-10 07:55:51,390 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7DL6IzxQTuZKIbkV, blocks=1
+2025-03-10 07:55:56,863 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2TXiEetnWTgYYj5J
+2025-03-10 07:55:56,876 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2TXiEetnWTgYYj5J, blocks=4
+2025-03-10 07:57:41,374 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=1MNsOn5xq8enoWbO
+2025-03-10 07:57:41,388 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=1MNsOn5xq8enoWbO, blocks=4
+2025-03-10 07:57:46,402 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=8vgJDw7Da4LZ7rjp
+2025-03-10 07:57:46,406 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=8vgJDw7Da4LZ7rjp, blocks=1
+2025-03-10 07:57:51,068 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2PM8ToxkFaW0wgJM
+2025-03-10 07:57:51,081 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2PM8ToxkFaW0wgJM, blocks=4
+2025-03-10 07:57:55,984 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=lHpPfzEOnDEdzq1d
+2025-03-10 07:57:56,003 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=lHpPfzEOnDEdzq1d, blocks=5
+2025-03-10 07:58:00,900 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6I9g0JKjB5GDx1ha
+2025-03-10 07:58:00,918 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6I9g0JKjB5GDx1ha, blocks=4
+2025-03-10 07:58:05,689 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7i7Rs86V8gn4ptAA
+2025-03-10 07:58:05,701 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7i7Rs86V8gn4ptAA, blocks=4
+2025-03-10 07:58:10,328 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3Y3N2tPenGpHBRl6
+2025-03-10 07:58:10,340 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3Y3N2tPenGpHBRl6, blocks=4
+2025-03-10 07:58:14,807 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=MXRXNOlwsi8zUdLD
+2025-03-10 07:58:14,820 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=MXRXNOlwsi8zUdLD, blocks=4
+2025-03-10 07:58:19,876 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=BNqLPkPTOlmwjnoe
+2025-03-10 07:58:19,885 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=BNqLPkPTOlmwjnoe, blocks=3
+2025-03-10 07:58:33,471 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6AZ03TCAf2uje7rq
+2025-03-10 07:58:33,483 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6AZ03TCAf2uje7rq, blocks=4
+2025-03-10 07:58:40,502 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7HEfJYUBinrblZ8O
+2025-03-10 07:58:40,503 - __main__ - WARNING - No keywords found in Word2Vec model for block 4: ['openstreetmaps']
+2025-03-10 07:58:40,505 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7HEfJYUBinrblZ8O, blocks=1
+2025-03-10 07:58:44,987 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6v8nOdhnhFi0PjzL
+2025-03-10 07:58:45,004 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6v8nOdhnhFi0PjzL, blocks=4
+2025-03-10 07:59:02,734 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6chaDEAxQfMP9E2X
+2025-03-10 07:59:02,741 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6chaDEAxQfMP9E2X, blocks=2
+2025-03-10 07:59:08,231 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5qPFopTnAe4FpOR5
+2025-03-10 07:59:08,243 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5qPFopTnAe4FpOR5, blocks=4
+2025-03-10 07:59:14,352 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7MXcVoRFbmLlYgLQ
+2025-03-10 07:59:14,360 - __main__ - WARNING - Not enough vectors (1) to compute similarity stats
+2025-03-10 07:59:14,364 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7MXcVoRFbmLlYgLQ, blocks=4
+2025-03-10 07:59:19,533 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2sDjqwooQy4IwW59
+2025-03-10 07:59:19,545 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2sDjqwooQy4IwW59, blocks=4
+2025-03-10 07:59:25,921 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=25oMEciVq2ver7oP
+2025-03-10 07:59:25,935 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=25oMEciVq2ver7oP, blocks=5
+2025-03-10 07:59:33,238 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6xhWOdZPKFpJY2BE
+2025-03-10 07:59:33,256 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6xhWOdZPKFpJY2BE, blocks=6
+2025-03-10 07:59:55,499 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=703GwGDdT8V4zkdi
+2025-03-10 07:59:55,517 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=703GwGDdT8V4zkdi, blocks=4
+2025-03-10 08:00:18,832 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3rIkxkLXf850sSOY
+2025-03-10 08:00:18,840 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3rIkxkLXf850sSOY, blocks=2
+2025-03-10 08:00:30,861 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2sW1rTBdvdRASVlq
+2025-03-10 08:00:30,863 - __main__ - WARNING - Not enough vectors (1) to compute similarity stats
+2025-03-10 08:00:30,864 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2sW1rTBdvdRASVlq, blocks=1
+2025-03-10 08:00:35,791 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=277E2jVyjNQDUMEk2
+2025-03-10 08:00:35,803 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=277E2jVyjNQDUMEk2, blocks=4
+2025-03-10 08:00:51,370 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=277E2jVyjNQDUMEk2
+2025-03-10 08:00:51,385 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=277E2jVyjNQDUMEk2, blocks=3
+2025-03-10 08:01:01,800 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6QJPGwuzczJ6BNkR1
+2025-03-10 08:01:01,805 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6QJPGwuzczJ6BNkR1, blocks=1
+2025-03-10 08:01:07,512 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=4bE1qY8xXlIsqu1QA
+2025-03-10 08:01:07,527 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=4bE1qY8xXlIsqu1QA, blocks=4
+2025-03-10 08:01:11,905 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2wHcN3sFm3LtBWMr9
+2025-03-10 08:01:11,915 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2wHcN3sFm3LtBWMr9, blocks=3
+2025-03-10 08:01:17,141 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=78IVledcPaW9Y3w8b
+2025-03-10 08:01:17,154 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=78IVledcPaW9Y3w8b, blocks=4
+2025-03-10 08:01:22,030 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6Hv45crXsA7nIBDRB
+2025-03-10 08:01:22,040 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6Hv45crXsA7nIBDRB, blocks=3
+2025-03-10 08:01:26,623 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=1CrUu5gYyaoBxguW6
+2025-03-10 08:01:26,633 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=1CrUu5gYyaoBxguW6, blocks=4
+2025-03-10 08:01:32,980 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2MDhmm6fvXYtzjksr
+2025-03-10 08:01:32,990 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2MDhmm6fvXYtzjksr, blocks=3
+2025-03-10 08:01:38,684 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=53kqZY9P7XfmG5yxC
+2025-03-10 08:01:38,700 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=53kqZY9P7XfmG5yxC, blocks=5
+2025-03-10 08:02:02,426 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=232jmJwt3y9WzZTCW
+2025-03-10 08:02:02,431 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=232jmJwt3y9WzZTCW, blocks=1
+2025-03-10 08:04:09,257 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6d7rhIbexzpbc4iDX
+2025-03-10 08:04:09,262 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6d7rhIbexzpbc4iDX, blocks=1
+2025-03-10 08:04:42,446 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2ao6Jp4Vg1nS4Zl3h
+2025-03-10 08:04:42,459 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2ao6Jp4Vg1nS4Zl3h, blocks=2
+2025-03-10 08:05:16,914 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2OQSC5MHurW1aFDCe
+2025-03-10 08:05:16,928 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2OQSC5MHurW1aFDCe, blocks=4
+2025-03-10 08:05:50,277 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3u9wM2oKzlhbtsXNj
+2025-03-10 08:05:50,289 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3u9wM2oKzlhbtsXNj, blocks=4
+2025-03-10 08:06:18,656 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7JLbfQwDCvDvhOQFl
+2025-03-10 08:06:18,660 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7JLbfQwDCvDvhOQFl, blocks=1
+2025-03-10 08:06:52,599 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6PFcfZePyv7zFG0br
+2025-03-10 08:06:52,604 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6PFcfZePyv7zFG0br, blocks=1
+2025-03-10 08:07:30,870 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3y8cHM6ZC5KZzwuUf
+2025-03-10 08:07:30,880 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3y8cHM6ZC5KZzwuUf, blocks=3
+2025-03-10 08:08:06,533 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=4huvP7tegwsn0mKLb
+2025-03-10 08:08:06,543 - __main__ - WARNING - Not enough vectors (1) to compute similarity stats
+2025-03-10 08:08:06,548 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=4huvP7tegwsn0mKLb, blocks=4
+2025-03-10 08:08:45,521 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=1Q4uj1dL2iJa9aHur
+2025-03-10 08:08:45,528 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=1Q4uj1dL2iJa9aHur, blocks=1
+2025-03-10 08:09:08,948 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3IVq9Ix1diKhT7tbr
+2025-03-10 08:09:08,962 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3IVq9Ix1diKhT7tbr, blocks=4
+2025-03-10 08:10:12,260 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=78j2nMrzOkAwS1As1
+2025-03-10 08:10:12,265 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=78j2nMrzOkAwS1As1, blocks=1
+2025-03-10 08:10:48,148 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6LztOdcRco6Y7vCfe
+2025-03-10 08:10:48,160 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6LztOdcRco6Y7vCfe, blocks=4
+2025-03-10 08:11:21,196 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=4FqQ73OSSwM3rQdHN
+2025-03-10 08:11:21,215 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=4FqQ73OSSwM3rQdHN, blocks=4
+2025-03-10 08:11:54,298 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5GtuvoKnwYSXJf5BW
+2025-03-10 08:11:54,311 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5GtuvoKnwYSXJf5BW, blocks=4
+2025-03-10 08:13:00,905 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5fcQlcHKEnuIrOznL
+2025-03-10 08:13:00,919 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5fcQlcHKEnuIrOznL, blocks=3
+2025-03-10 08:14:06,682 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=k3CFvmjYEnzkXDhZF
+2025-03-10 08:14:06,697 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=k3CFvmjYEnzkXDhZF, blocks=5
+2025-03-10 08:14:40,027 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6WAMwt1bnzjWRjwU9
+2025-03-10 08:14:40,037 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6WAMwt1bnzjWRjwU9, blocks=3
+2025-03-10 08:15:11,970 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5Ujm3nu020Tir555R
+2025-03-10 08:15:11,984 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5Ujm3nu020Tir555R, blocks=4
+2025-03-10 08:15:47,689 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=47G6Dr9wExYxLG1LD
+2025-03-10 08:15:47,700 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=47G6Dr9wExYxLG1LD, blocks=3
+2025-03-10 08:16:19,128 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5x5daHd1iShJX8zo8
+2025-03-10 08:16:19,145 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5x5daHd1iShJX8zo8, blocks=4
+2025-03-10 08:16:50,573 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2pSCiYo4qUbvN4H4N
+2025-03-10 08:16:50,586 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2pSCiYo4qUbvN4H4N, blocks=4
+2025-03-10 08:17:57,619 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=6sC24XHqyEc6PAI6n
+2025-03-10 08:17:57,624 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=6sC24XHqyEc6PAI6n, blocks=1
+2025-03-10 08:18:57,301 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=1VLwn9Yt6UDU3fCwY
+2025-03-10 08:18:57,320 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=1VLwn9Yt6UDU3fCwY, blocks=4
+2025-03-10 08:19:28,793 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7aebNQVS03fGKQMzx
+2025-03-10 08:19:28,807 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7aebNQVS03fGKQMzx, blocks=4
+2025-03-10 08:20:07,651 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=1hGqiGK7V8awetxoa
+2025-03-10 08:20:07,657 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=1hGqiGK7V8awetxoa, blocks=1
+2025-03-10 08:20:33,725 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=pwAxjpf4vPoOXE75k
+2025-03-10 08:20:33,735 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=pwAxjpf4vPoOXE75k, blocks=3
+2025-03-10 08:21:06,051 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3nVHEWp2iyDdD4Lfb
+2025-03-10 08:21:06,064 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3nVHEWp2iyDdD4Lfb, blocks=4
+2025-03-10 08:21:43,845 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3KUXfSAo6H1HVwznj
+2025-03-10 08:21:43,847 - __main__ - WARNING - Not enough vectors (1) to compute similarity stats
+2025-03-10 08:21:43,849 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3KUXfSAo6H1HVwznj, blocks=1
+2025-03-10 08:22:11,703 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=5bHS90uvDa3JpRqdj
+2025-03-10 08:22:11,720 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=5bHS90uvDa3JpRqdj, blocks=4
+2025-03-10 08:22:45,734 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=1HclRxG2rvIYydt3Q
+2025-03-10 08:22:45,747 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=1HclRxG2rvIYydt3Q, blocks=4
+2025-03-10 08:23:17,095 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=7UuMwi4e0noKOH3gV
+2025-03-10 08:23:17,109 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=7UuMwi4e0noKOH3gV, blocks=4
+2025-03-10 08:23:49,438 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=3Elz7fYevEsEHA4hH
+2025-03-10 08:23:49,452 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=3Elz7fYevEsEHA4hH, blocks=4
+2025-03-10 08:24:54,438 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=2uoxquMAa9nmOesLt
+2025-03-10 08:24:54,448 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=2uoxquMAa9nmOesLt, blocks=3
+2025-03-10 08:28:04,530 - __main__ - INFO - Consumed message from topic keywords-to-vectors: doc_id=4Yi65t2Iz5xHut35y
+2025-03-10 08:28:04,532 - __main__ - WARNING - Not enough vectors (1) to compute similarity stats
+2025-03-10 08:28:04,534 - __main__ - INFO - Processed and sent to topic vectors-to-summary: doc_id=4Yi65t2Iz5xHut35y, blocks=1
+INFO:     192.168.1.247:62592 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.1.247:62614 - "GET /docs HTTP/1.1" 200 OK

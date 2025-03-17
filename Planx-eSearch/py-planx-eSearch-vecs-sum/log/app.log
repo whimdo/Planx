@@ -1,0 +1,222 @@
+2025-03-10 07:51:18,821 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:18,822 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:51:18,824 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:18,929 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:51:18,930 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:51:18,939 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:18,941 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:51:18,942 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:19,049 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:51:19,050 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:51:19,052 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:51:19,133 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:51:19,134 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:51:19,140 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:51:19,141 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:51:19,143 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:51:19,145 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:51:19,149 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+INFO:     Started server process [395799]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9003 (Press CTRL+C to quit)
+2025-03-10 07:51:19,251 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:19,252 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:51:19,353 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:51:19,360 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:51:19,362 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:19,363 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:19,366 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 20
+2025-03-10 07:51:19,367 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:51:19,368 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:52:26,401 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1HrmXnGiV9SVOpfy
+2025-03-10 07:52:26,403 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1HrmXnGiV9SVOpfy
+2025-03-10 07:52:26,406 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:52:26,407 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:52:26,407 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:52:26,419 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4oEMcTy8EuJrROP0
+2025-03-10 07:52:26,421 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4oEMcTy8EuJrROP0
+2025-03-10 07:52:26,424 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1i4pT05sXWEPSoUa
+2025-03-10 07:52:26,425 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1i4pT05sXWEPSoUa
+2025-03-10 07:53:01,304 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=50Tmg8itWURtS06i
+2025-03-10 07:53:01,310 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 50Tmg8itWURtS06i
+2025-03-10 07:53:13,272 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3wvvCWrcvOejt8Tb
+2025-03-10 07:53:13,277 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3wvvCWrcvOejt8Tb
+2025-03-10 07:53:17,852 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5hYyg6cijXWZZUCg
+2025-03-10 07:53:17,854 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5hYyg6cijXWZZUCg
+2025-03-10 07:53:23,170 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=26FQ0VLWjDkTd3Ux
+2025-03-10 07:53:23,172 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 26FQ0VLWjDkTd3Ux
+2025-03-10 07:53:31,491 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=70Y093nLCMn02NPB
+2025-03-10 07:53:31,494 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 70Y093nLCMn02NPB
+2025-03-10 07:53:38,024 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3j8vnWFofDjFJT2h
+2025-03-10 07:53:38,028 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3j8vnWFofDjFJT2h
+2025-03-10 07:53:43,841 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6TVPgqlZZ3NSjZd6
+2025-03-10 07:53:43,845 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6TVPgqlZZ3NSjZd6
+2025-03-10 07:53:49,933 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5S6prEDxDZo0nnpg
+2025-03-10 07:53:49,935 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5S6prEDxDZo0nnpg
+2025-03-10 07:53:56,083 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2uyBus7Sncm4x4DW
+2025-03-10 07:53:56,087 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2uyBus7Sncm4x4DW
+2025-03-10 07:54:05,739 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7KtFqy2dbx9jtk3b
+2025-03-10 07:54:05,742 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7KtFqy2dbx9jtk3b
+2025-03-10 07:54:10,086 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=59pQWV9IbYD65TMP
+2025-03-10 07:54:10,089 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 59pQWV9IbYD65TMP
+2025-03-10 07:54:17,356 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=76GW79ybbswe3PKM
+2025-03-10 07:54:17,360 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 76GW79ybbswe3PKM
+2025-03-10 07:54:23,364 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7EkXpf97hlpZmu2K
+2025-03-10 07:54:23,368 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7EkXpf97hlpZmu2K
+2025-03-10 07:54:25,204 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=qzdF55F2Hjo95nMl
+2025-03-10 07:54:25,207 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: qzdF55F2Hjo95nMl
+2025-03-10 07:54:31,388 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=18h3MgsjO1sD7UhW
+2025-03-10 07:54:31,391 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 18h3MgsjO1sD7UhW
+2025-03-10 07:54:36,874 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2YBAeE8rYPJCLFgT
+2025-03-10 07:54:36,877 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2YBAeE8rYPJCLFgT
+2025-03-10 07:54:47,386 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3U97C40XhwCaNqKg
+2025-03-10 07:54:47,390 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3U97C40XhwCaNqKg
+2025-03-10 07:54:53,379 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6mS1pKgkQSl2QgMZ
+2025-03-10 07:54:53,382 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6mS1pKgkQSl2QgMZ
+2025-03-10 07:54:59,943 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3RnyQ2MYscs75PRO
+2025-03-10 07:54:59,948 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3RnyQ2MYscs75PRO
+2025-03-10 07:55:07,961 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3vskupw2lnWlNeHV
+2025-03-10 07:55:07,966 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3vskupw2lnWlNeHV
+2025-03-10 07:55:26,480 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7iWTs8E1xN5cVqTH
+2025-03-10 07:55:26,484 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7iWTs8E1xN5cVqTH
+2025-03-10 07:55:32,499 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5gqbkWRMzD3SsWhM
+2025-03-10 07:55:32,503 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5gqbkWRMzD3SsWhM
+2025-03-10 07:55:34,520 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5weqd0oRfX95gkrn
+2025-03-10 07:55:34,522 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5weqd0oRfX95gkrn
+2025-03-10 07:55:51,398 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7DL6IzxQTuZKIbkV
+2025-03-10 07:55:51,401 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7DL6IzxQTuZKIbkV
+2025-03-10 07:55:56,900 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2TXiEetnWTgYYj5J
+2025-03-10 07:55:56,903 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2TXiEetnWTgYYj5J
+2025-03-10 07:57:42,220 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1MNsOn5xq8enoWbO
+2025-03-10 07:57:42,226 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1MNsOn5xq8enoWbO
+2025-03-10 07:57:46,413 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=8vgJDw7Da4LZ7rjp
+2025-03-10 07:57:46,416 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 8vgJDw7Da4LZ7rjp
+2025-03-10 07:57:51,105 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2PM8ToxkFaW0wgJM
+2025-03-10 07:57:51,108 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2PM8ToxkFaW0wgJM
+2025-03-10 07:57:57,232 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=lHpPfzEOnDEdzq1d
+2025-03-10 07:57:57,237 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: lHpPfzEOnDEdzq1d
+2025-03-10 07:58:00,940 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6I9g0JKjB5GDx1ha
+2025-03-10 07:58:00,943 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6I9g0JKjB5GDx1ha
+2025-03-10 07:58:06,242 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7i7Rs86V8gn4ptAA
+2025-03-10 07:58:06,246 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7i7Rs86V8gn4ptAA
+2025-03-10 07:58:10,361 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Y3N2tPenGpHBRl6
+2025-03-10 07:58:10,364 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Y3N2tPenGpHBRl6
+2025-03-10 07:58:14,843 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=MXRXNOlwsi8zUdLD
+2025-03-10 07:58:14,845 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: MXRXNOlwsi8zUdLD
+2025-03-10 07:58:19,903 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=BNqLPkPTOlmwjnoe
+2025-03-10 07:58:19,906 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: BNqLPkPTOlmwjnoe
+2025-03-10 07:58:33,505 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6AZ03TCAf2uje7rq
+2025-03-10 07:58:33,507 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6AZ03TCAf2uje7rq
+2025-03-10 07:58:40,509 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7HEfJYUBinrblZ8O
+2025-03-10 07:58:40,511 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7HEfJYUBinrblZ8O
+2025-03-10 07:58:45,268 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6v8nOdhnhFi0PjzL
+2025-03-10 07:58:45,272 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6v8nOdhnhFi0PjzL
+2025-03-10 07:59:02,755 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6chaDEAxQfMP9E2X
+2025-03-10 07:59:02,757 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6chaDEAxQfMP9E2X
+2025-03-10 07:59:08,265 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5qPFopTnAe4FpOR5
+2025-03-10 07:59:08,267 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5qPFopTnAe4FpOR5
+2025-03-10 07:59:14,385 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7MXcVoRFbmLlYgLQ
+2025-03-10 07:59:14,389 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7MXcVoRFbmLlYgLQ
+2025-03-10 07:59:21,410 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2sDjqwooQy4IwW59
+2025-03-10 07:59:21,413 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2sDjqwooQy4IwW59
+2025-03-10 07:59:25,961 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=25oMEciVq2ver7oP
+2025-03-10 07:59:25,965 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 25oMEciVq2ver7oP
+2025-03-10 07:59:33,286 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6xhWOdZPKFpJY2BE
+2025-03-10 07:59:33,289 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6xhWOdZPKFpJY2BE
+2025-03-10 07:59:55,539 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=703GwGDdT8V4zkdi
+2025-03-10 07:59:55,541 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 703GwGDdT8V4zkdi
+2025-03-10 08:00:18,936 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3rIkxkLXf850sSOY
+2025-03-10 08:00:18,939 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3rIkxkLXf850sSOY
+2025-03-10 08:00:30,870 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2sW1rTBdvdRASVlq
+2025-03-10 08:00:30,873 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2sW1rTBdvdRASVlq
+2025-03-10 08:00:36,634 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=277E2jVyjNQDUMEk2
+2025-03-10 08:00:36,639 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 277E2jVyjNQDUMEk2
+2025-03-10 08:00:51,404 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=277E2jVyjNQDUMEk2
+2025-03-10 08:00:51,406 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 277E2jVyjNQDUMEk2
+2025-03-10 08:01:01,814 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6QJPGwuzczJ6BNkR1
+2025-03-10 08:01:01,816 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6QJPGwuzczJ6BNkR1
+2025-03-10 08:01:09,530 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4bE1qY8xXlIsqu1QA
+2025-03-10 08:01:09,533 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4bE1qY8xXlIsqu1QA
+2025-03-10 08:01:11,933 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2wHcN3sFm3LtBWMr9
+2025-03-10 08:01:11,936 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2wHcN3sFm3LtBWMr9
+2025-03-10 08:01:17,177 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=78IVledcPaW9Y3w8b
+2025-03-10 08:01:17,180 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 78IVledcPaW9Y3w8b
+2025-03-10 08:01:22,060 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6Hv45crXsA7nIBDRB
+2025-03-10 08:01:22,064 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6Hv45crXsA7nIBDRB
+2025-03-10 08:01:26,656 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1CrUu5gYyaoBxguW6
+2025-03-10 08:01:26,658 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1CrUu5gYyaoBxguW6
+2025-03-10 08:01:33,009 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2MDhmm6fvXYtzjksr
+2025-03-10 08:01:33,011 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2MDhmm6fvXYtzjksr
+2025-03-10 08:01:39,551 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=53kqZY9P7XfmG5yxC
+2025-03-10 08:01:39,555 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 53kqZY9P7XfmG5yxC
+2025-03-10 08:02:02,439 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=232jmJwt3y9WzZTCW
+2025-03-10 08:02:02,445 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 232jmJwt3y9WzZTCW
+2025-03-10 08:04:09,270 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6d7rhIbexzpbc4iDX
+2025-03-10 08:04:09,275 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6d7rhIbexzpbc4iDX
+2025-03-10 08:04:42,473 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2ao6Jp4Vg1nS4Zl3h
+2025-03-10 08:04:42,478 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2ao6Jp4Vg1nS4Zl3h
+2025-03-10 08:05:16,951 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2OQSC5MHurW1aFDCe
+2025-03-10 08:05:16,954 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2OQSC5MHurW1aFDCe
+2025-03-10 08:05:50,313 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3u9wM2oKzlhbtsXNj
+2025-03-10 08:05:50,316 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3u9wM2oKzlhbtsXNj
+2025-03-10 08:06:18,669 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7JLbfQwDCvDvhOQFl
+2025-03-10 08:06:18,672 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7JLbfQwDCvDvhOQFl
+2025-03-10 08:06:52,612 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6PFcfZePyv7zFG0br
+2025-03-10 08:06:52,618 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6PFcfZePyv7zFG0br
+2025-03-10 08:07:30,897 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3y8cHM6ZC5KZzwuUf
+2025-03-10 08:07:30,899 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3y8cHM6ZC5KZzwuUf
+2025-03-10 08:08:06,569 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4huvP7tegwsn0mKLb
+2025-03-10 08:08:06,571 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4huvP7tegwsn0mKLb
+2025-03-10 08:08:45,536 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1Q4uj1dL2iJa9aHur
+2025-03-10 08:08:45,542 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1Q4uj1dL2iJa9aHur
+2025-03-10 08:09:08,985 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3IVq9Ix1diKhT7tbr
+2025-03-10 08:09:08,988 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3IVq9Ix1diKhT7tbr
+2025-03-10 08:10:12,272 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=78j2nMrzOkAwS1As1
+2025-03-10 08:10:12,274 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 78j2nMrzOkAwS1As1
+2025-03-10 08:10:48,185 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6LztOdcRco6Y7vCfe
+2025-03-10 08:10:48,187 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6LztOdcRco6Y7vCfe
+2025-03-10 08:11:23,617 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4FqQ73OSSwM3rQdHN
+2025-03-10 08:11:23,621 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4FqQ73OSSwM3rQdHN
+2025-03-10 08:11:54,333 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5GtuvoKnwYSXJf5BW
+2025-03-10 08:11:54,339 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5GtuvoKnwYSXJf5BW
+2025-03-10 08:13:00,938 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5fcQlcHKEnuIrOznL
+2025-03-10 08:13:00,940 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5fcQlcHKEnuIrOznL
+2025-03-10 08:14:06,724 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=k3CFvmjYEnzkXDhZF
+2025-03-10 08:14:06,729 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: k3CFvmjYEnzkXDhZF
+2025-03-10 08:14:42,123 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6WAMwt1bnzjWRjwU9
+2025-03-10 08:14:42,130 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6WAMwt1bnzjWRjwU9
+2025-03-10 08:15:12,007 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5Ujm3nu020Tir555R
+2025-03-10 08:15:12,009 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5Ujm3nu020Tir555R
+2025-03-10 08:15:47,721 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=47G6Dr9wExYxLG1LD
+2025-03-10 08:15:47,726 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 47G6Dr9wExYxLG1LD
+2025-03-10 08:16:19,169 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5x5daHd1iShJX8zo8
+2025-03-10 08:16:19,174 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5x5daHd1iShJX8zo8
+2025-03-10 08:16:50,608 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2pSCiYo4qUbvN4H4N
+2025-03-10 08:16:50,611 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2pSCiYo4qUbvN4H4N
+2025-03-10 08:17:57,632 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6sC24XHqyEc6PAI6n
+2025-03-10 08:17:57,635 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6sC24XHqyEc6PAI6n
+2025-03-10 08:18:57,344 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1VLwn9Yt6UDU3fCwY
+2025-03-10 08:18:57,349 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1VLwn9Yt6UDU3fCwY
+2025-03-10 08:19:29,850 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7aebNQVS03fGKQMzx
+2025-03-10 08:19:29,857 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7aebNQVS03fGKQMzx
+2025-03-10 08:20:07,665 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1hGqiGK7V8awetxoa
+2025-03-10 08:20:07,668 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1hGqiGK7V8awetxoa
+2025-03-10 08:20:33,753 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=pwAxjpf4vPoOXE75k
+2025-03-10 08:20:33,755 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: pwAxjpf4vPoOXE75k
+2025-03-10 08:21:07,244 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3nVHEWp2iyDdD4Lfb
+2025-03-10 08:21:07,248 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3nVHEWp2iyDdD4Lfb
+2025-03-10 08:21:43,856 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3KUXfSAo6H1HVwznj
+2025-03-10 08:21:43,861 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3KUXfSAo6H1HVwznj
+2025-03-10 08:22:11,746 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5bHS90uvDa3JpRqdj
+2025-03-10 08:22:11,748 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5bHS90uvDa3JpRqdj
+2025-03-10 08:22:45,769 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1HclRxG2rvIYydt3Q
+2025-03-10 08:22:45,771 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1HclRxG2rvIYydt3Q
+2025-03-10 08:23:17,132 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7UuMwi4e0noKOH3gV
+2025-03-10 08:23:17,135 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7UuMwi4e0noKOH3gV
+2025-03-10 08:23:49,574 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Elz7fYevEsEHA4hH
+2025-03-10 08:23:49,578 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Elz7fYevEsEHA4hH
+2025-03-10 08:24:54,957 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2uoxquMAa9nmOesLt
+2025-03-10 08:24:54,963 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2uoxquMAa9nmOesLt
+2025-03-10 08:28:04,542 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4Yi65t2Iz5xHut35y
+2025-03-10 08:28:04,547 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4Yi65t2Iz5xHut35y

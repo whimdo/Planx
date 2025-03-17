@@ -1,0 +1,37 @@
+nohup: ignoring input
+2025-03-03 08:56:50,577 - main - INFO - Loading Word2Vec model...
+2025-03-03 08:56:50,577 - gensim.models.keyedvectors - INFO - loading projection weights from /home/intern/public/GoogleNews-vectors-negative300.bin.gz
+2025-03-03 08:57:56,816 - gensim.utils - INFO - KeyedVectors lifecycle event {'msg': 'loaded (3000000, 300) matrix of type float32 from /home/intern/public/GoogleNews-vectors-negative300.bin.gz', 'binary': True, 'encoding': 'utf8', 'datetime': '2025-03-03T08:57:56.508729', 'gensim': '4.3.3', 'python': '3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', 'platform': 'Linux-5.4.0-205-generic-x86_64-with-glibc2.31', 'event': 'load_word2vec_format'}
+2025-03-03 08:57:56,818 - main - INFO - Word2Vec model loaded successfully
+INFO:     Started server process [638706]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2025-03-03 08:58:41,087 - main - INFO - Received request with keywords: ['ai', 'machinelearning', 'data', 'healthcare', 'finance']
+2025-03-03 08:58:41,096 - main - INFO - Similarity stats: range=0.3457886278629303, variance=0.013990798033773899, std_dev=0.11828270554542542
+2025-03-03 08:58:41,096 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.3457886278629303, 'variance': 0.013990798033773899, 'std_dev': 0.11828270554542542}
+INFO:     192.168.1.222:53246 - "POST /get_feature_vector_and_stats/ HTTP/1.1" 200 OK
+2025-03-03 08:58:53,110 - main - INFO - Received request with keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-03 08:58:53,114 - main - INFO - Similarity stats: range=0.6295720338821411, variance=0.021898068487644196, std_dev=0.1479799598455429
+2025-03-03 08:58:53,114 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6295720338821411, 'variance': 0.021898068487644196, 'std_dev': 0.1479799598455429}
+INFO:     192.168.1.222:53265 - "POST /get_feature_vector_and_stats/ HTTP/1.1" 200 OK
+2025-03-03 09:13:34,053 - main - INFO - Received request with keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-03 09:13:34,056 - main - INFO - Similarity stats: range=0.6295720338821411, variance=0.021898068487644196, std_dev=0.1479799598455429
+2025-03-03 09:13:34,057 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6295720338821411, 'variance': 0.021898068487644196, 'std_dev': 0.1479799598455429}
+INFO:     192.168.1.222:55138 - "POST /get_feature_vector_and_stats/ HTTP/1.1" 200 OK
+INFO:     192.168.1.235:53571 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.1.235:53571 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.1.235:53701 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.1.235:53701 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.1.235:54640 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.1.235:54640 - "GET /openapi.json HTTP/1.1" 200 OK
+2025-03-04 03:10:53,397 - main - INFO - Received request with keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-04 03:10:53,404 - main - INFO - Similarity stats: range=0.6295720338821411, variance=0.021898068487644196, std_dev=0.1479799598455429
+2025-03-04 03:10:53,405 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6295720338821411, 'variance': 0.021898068487644196, 'std_dev': 0.1479799598455429}
+INFO:     192.168.1.235:54639 - "POST /get_feature_vector_and_stats/ HTTP/1.1" 200 OK
+2025-03-04 06:24:10,462 - main - INFO - Received request with keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-04 06:24:10,470 - main - INFO - Similarity stats: range=0.6295720338821411, variance=0.021898068487644196, std_dev=0.1479799598455429
+2025-03-04 06:24:10,470 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6295720338821411, 'variance': 0.021898068487644196, 'std_dev': 0.1479799598455429}
+INFO:     192.168.1.235:47481 - "POST /get_feature_vector_and_stats/ HTTP/1.1" 200 OK
+INFO:     192.168.1.235:58736 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.1.235:58736 - "GET /openapi.json HTTP/1.1" 200 OK

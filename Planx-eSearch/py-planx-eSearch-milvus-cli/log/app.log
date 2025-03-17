@@ -1,0 +1,217 @@
+2025-03-10 07:51:19,431 - __main__ - INFO - Connecting to Milvus...
+2025-03-10 07:51:19,463 - __main__ - INFO - Connected to Milvus successfully
+2025-03-10 07:51:20,030 - __main__ - INFO - Created Milvus collection: documentvectors310
+2025-03-10 07:51:20,036 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:20,037 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:51:20,038 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:20,143 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:51:20,144 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:51:20,146 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('summary-vectors',)
+2025-03-10 07:51:20,235 - __main__ - INFO - Starting Kafka consumer for topic: summary-vectors
+2025-03-10 07:51:20,235 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:51:20,240 - kafka.cluster - INFO - Group coordinator for milvus_storage_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:51:20,241 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group milvus_storage_group
+2025-03-10 07:51:20,242 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:51:20,243 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group milvus_storage_group
+2025-03-10 07:51:20,245 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+INFO:     Started server process [395804]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9004 (Press CTRL+C to quit)
+2025-03-10 07:51:20,346 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:20,346 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:51:20,447 - kafka.coordinator - INFO - (Re-)joining group milvus_storage_group
+2025-03-10 07:51:20,451 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:51:20,452 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:20,452 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:20,454 - kafka.coordinator - INFO - Successfully joined group milvus_storage_group with generation 27
+2025-03-10 07:51:20,454 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='summary-vectors', partition=0)]
+2025-03-10 07:51:20,455 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='summary-vectors', partition=0)} for group milvus_storage_group
+2025-03-10 07:52:26,471 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=1HrmXnGiV9SVOpfy
+2025-03-10 07:52:27,515 - __main__ - INFO - Inserted document into Milvus for doc_id: 1HrmXnGiV9SVOpfy
+2025-03-10 07:52:27,515 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=4oEMcTy8EuJrROP0
+2025-03-10 07:52:27,539 - __main__ - INFO - Inserted document into Milvus for doc_id: 4oEMcTy8EuJrROP0
+2025-03-10 07:52:27,539 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=1i4pT05sXWEPSoUa
+2025-03-10 07:52:27,560 - __main__ - INFO - Inserted document into Milvus for doc_id: 1i4pT05sXWEPSoUa
+2025-03-10 07:53:01,319 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=50Tmg8itWURtS06i
+2025-03-10 07:53:01,344 - __main__ - INFO - Inserted document into Milvus for doc_id: 50Tmg8itWURtS06i
+2025-03-10 07:53:13,286 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3wvvCWrcvOejt8Tb
+2025-03-10 07:53:13,311 - __main__ - INFO - Inserted document into Milvus for doc_id: 3wvvCWrcvOejt8Tb
+2025-03-10 07:53:17,863 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5hYyg6cijXWZZUCg
+2025-03-10 07:53:17,885 - __main__ - INFO - Inserted document into Milvus for doc_id: 5hYyg6cijXWZZUCg
+2025-03-10 07:53:23,182 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=26FQ0VLWjDkTd3Ux
+2025-03-10 07:53:23,206 - __main__ - INFO - Inserted document into Milvus for doc_id: 26FQ0VLWjDkTd3Ux
+2025-03-10 07:53:31,502 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=70Y093nLCMn02NPB
+2025-03-10 07:53:31,532 - __main__ - INFO - Inserted document into Milvus for doc_id: 70Y093nLCMn02NPB
+2025-03-10 07:53:38,036 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3j8vnWFofDjFJT2h
+2025-03-10 07:53:38,058 - __main__ - INFO - Inserted document into Milvus for doc_id: 3j8vnWFofDjFJT2h
+2025-03-10 07:53:43,852 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6TVPgqlZZ3NSjZd6
+2025-03-10 07:53:43,880 - __main__ - INFO - Inserted document into Milvus for doc_id: 6TVPgqlZZ3NSjZd6
+2025-03-10 07:53:49,943 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5S6prEDxDZo0nnpg
+2025-03-10 07:53:49,967 - __main__ - INFO - Inserted document into Milvus for doc_id: 5S6prEDxDZo0nnpg
+2025-03-10 07:53:56,095 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2uyBus7Sncm4x4DW
+2025-03-10 07:53:56,120 - __main__ - INFO - Inserted document into Milvus for doc_id: 2uyBus7Sncm4x4DW
+2025-03-10 07:54:05,749 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7KtFqy2dbx9jtk3b
+2025-03-10 07:54:05,772 - __main__ - INFO - Inserted document into Milvus for doc_id: 7KtFqy2dbx9jtk3b
+2025-03-10 07:54:10,098 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=59pQWV9IbYD65TMP
+2025-03-10 07:54:10,122 - __main__ - INFO - Inserted document into Milvus for doc_id: 59pQWV9IbYD65TMP
+2025-03-10 07:54:17,368 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=76GW79ybbswe3PKM
+2025-03-10 07:54:17,394 - __main__ - INFO - Inserted document into Milvus for doc_id: 76GW79ybbswe3PKM
+2025-03-10 07:54:23,378 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7EkXpf97hlpZmu2K
+2025-03-10 07:54:23,404 - __main__ - INFO - Inserted document into Milvus for doc_id: 7EkXpf97hlpZmu2K
+2025-03-10 07:54:25,215 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=qzdF55F2Hjo95nMl
+2025-03-10 07:54:25,237 - __main__ - INFO - Inserted document into Milvus for doc_id: qzdF55F2Hjo95nMl
+2025-03-10 07:54:31,399 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=18h3MgsjO1sD7UhW
+2025-03-10 07:54:31,424 - __main__ - INFO - Inserted document into Milvus for doc_id: 18h3MgsjO1sD7UhW
+2025-03-10 07:54:36,885 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2YBAeE8rYPJCLFgT
+2025-03-10 07:54:36,910 - __main__ - INFO - Inserted document into Milvus for doc_id: 2YBAeE8rYPJCLFgT
+2025-03-10 07:54:47,398 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3U97C40XhwCaNqKg
+2025-03-10 07:54:47,422 - __main__ - INFO - Inserted document into Milvus for doc_id: 3U97C40XhwCaNqKg
+2025-03-10 07:54:53,390 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6mS1pKgkQSl2QgMZ
+2025-03-10 07:54:53,415 - __main__ - INFO - Inserted document into Milvus for doc_id: 6mS1pKgkQSl2QgMZ
+2025-03-10 07:54:59,960 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3RnyQ2MYscs75PRO
+2025-03-10 07:54:59,986 - __main__ - INFO - Inserted document into Milvus for doc_id: 3RnyQ2MYscs75PRO
+2025-03-10 07:55:07,974 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3vskupw2lnWlNeHV
+2025-03-10 07:55:07,997 - __main__ - INFO - Inserted document into Milvus for doc_id: 3vskupw2lnWlNeHV
+2025-03-10 07:55:27,835 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7iWTs8E1xN5cVqTH
+2025-03-10 07:55:27,862 - __main__ - INFO - Inserted document into Milvus for doc_id: 7iWTs8E1xN5cVqTH
+2025-03-10 07:55:32,515 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5gqbkWRMzD3SsWhM
+2025-03-10 07:55:32,543 - __main__ - INFO - Inserted document into Milvus for doc_id: 5gqbkWRMzD3SsWhM
+2025-03-10 07:55:34,531 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5weqd0oRfX95gkrn
+2025-03-10 07:55:34,555 - __main__ - INFO - Inserted document into Milvus for doc_id: 5weqd0oRfX95gkrn
+2025-03-10 07:55:51,409 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7DL6IzxQTuZKIbkV
+2025-03-10 07:55:51,432 - __main__ - INFO - Inserted document into Milvus for doc_id: 7DL6IzxQTuZKIbkV
+2025-03-10 07:55:56,912 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2TXiEetnWTgYYj5J
+2025-03-10 07:55:56,937 - __main__ - INFO - Inserted document into Milvus for doc_id: 2TXiEetnWTgYYj5J
+2025-03-10 07:57:42,237 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=1MNsOn5xq8enoWbO
+2025-03-10 07:57:42,264 - __main__ - INFO - Inserted document into Milvus for doc_id: 1MNsOn5xq8enoWbO
+2025-03-10 07:57:46,422 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=8vgJDw7Da4LZ7rjp
+2025-03-10 07:57:46,447 - __main__ - INFO - Inserted document into Milvus for doc_id: 8vgJDw7Da4LZ7rjp
+2025-03-10 07:57:51,116 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2PM8ToxkFaW0wgJM
+2025-03-10 07:57:51,143 - __main__ - INFO - Inserted document into Milvus for doc_id: 2PM8ToxkFaW0wgJM
+2025-03-10 07:57:57,245 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=lHpPfzEOnDEdzq1d
+2025-03-10 07:57:57,270 - __main__ - INFO - Inserted document into Milvus for doc_id: lHpPfzEOnDEdzq1d
+2025-03-10 07:58:00,952 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6I9g0JKjB5GDx1ha
+2025-03-10 07:58:00,975 - __main__ - INFO - Inserted document into Milvus for doc_id: 6I9g0JKjB5GDx1ha
+2025-03-10 07:58:06,256 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7i7Rs86V8gn4ptAA
+2025-03-10 07:58:06,280 - __main__ - INFO - Inserted document into Milvus for doc_id: 7i7Rs86V8gn4ptAA
+2025-03-10 07:58:10,372 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3Y3N2tPenGpHBRl6
+2025-03-10 07:58:10,396 - __main__ - INFO - Inserted document into Milvus for doc_id: 3Y3N2tPenGpHBRl6
+2025-03-10 07:58:14,855 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=MXRXNOlwsi8zUdLD
+2025-03-10 07:58:14,886 - __main__ - INFO - Inserted document into Milvus for doc_id: MXRXNOlwsi8zUdLD
+2025-03-10 07:58:19,915 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=BNqLPkPTOlmwjnoe
+2025-03-10 07:58:19,939 - __main__ - INFO - Inserted document into Milvus for doc_id: BNqLPkPTOlmwjnoe
+2025-03-10 07:58:33,516 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6AZ03TCAf2uje7rq
+2025-03-10 07:58:33,542 - __main__ - INFO - Inserted document into Milvus for doc_id: 6AZ03TCAf2uje7rq
+2025-03-10 07:58:40,516 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7HEfJYUBinrblZ8O
+2025-03-10 07:58:40,541 - __main__ - INFO - Inserted document into Milvus for doc_id: 7HEfJYUBinrblZ8O
+2025-03-10 07:58:45,282 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6v8nOdhnhFi0PjzL
+2025-03-10 07:58:45,307 - __main__ - INFO - Inserted document into Milvus for doc_id: 6v8nOdhnhFi0PjzL
+2025-03-10 07:59:02,766 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6chaDEAxQfMP9E2X
+2025-03-10 07:59:02,791 - __main__ - INFO - Inserted document into Milvus for doc_id: 6chaDEAxQfMP9E2X
+2025-03-10 07:59:08,275 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5qPFopTnAe4FpOR5
+2025-03-10 07:59:08,304 - __main__ - INFO - Inserted document into Milvus for doc_id: 5qPFopTnAe4FpOR5
+2025-03-10 07:59:14,398 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7MXcVoRFbmLlYgLQ
+2025-03-10 07:59:14,425 - __main__ - INFO - Inserted document into Milvus for doc_id: 7MXcVoRFbmLlYgLQ
+2025-03-10 07:59:21,423 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2sDjqwooQy4IwW59
+2025-03-10 07:59:21,447 - __main__ - INFO - Inserted document into Milvus for doc_id: 2sDjqwooQy4IwW59
+2025-03-10 07:59:25,974 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=25oMEciVq2ver7oP
+2025-03-10 07:59:25,997 - __main__ - INFO - Inserted document into Milvus for doc_id: 25oMEciVq2ver7oP
+2025-03-10 07:59:33,298 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6xhWOdZPKFpJY2BE
+2025-03-10 07:59:33,324 - __main__ - INFO - Inserted document into Milvus for doc_id: 6xhWOdZPKFpJY2BE
+2025-03-10 07:59:55,550 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=703GwGDdT8V4zkdi
+2025-03-10 07:59:55,575 - __main__ - INFO - Inserted document into Milvus for doc_id: 703GwGDdT8V4zkdi
+2025-03-10 08:00:18,947 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3rIkxkLXf850sSOY
+2025-03-10 08:00:18,971 - __main__ - INFO - Inserted document into Milvus for doc_id: 3rIkxkLXf850sSOY
+2025-03-10 08:00:30,881 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2sW1rTBdvdRASVlq
+2025-03-10 08:00:30,907 - __main__ - INFO - Inserted document into Milvus for doc_id: 2sW1rTBdvdRASVlq
+2025-03-10 08:00:37,883 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=277E2jVyjNQDUMEk2
+2025-03-10 08:00:37,912 - __main__ - INFO - Inserted document into Milvus for doc_id: 277E2jVyjNQDUMEk2
+2025-03-10 08:00:51,414 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=277E2jVyjNQDUMEk2
+2025-03-10 08:00:51,437 - __main__ - INFO - Inserted document into Milvus for doc_id: 277E2jVyjNQDUMEk2
+2025-03-10 08:01:01,827 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6QJPGwuzczJ6BNkR1
+2025-03-10 08:01:01,855 - __main__ - INFO - Inserted document into Milvus for doc_id: 6QJPGwuzczJ6BNkR1
+2025-03-10 08:01:09,542 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=4bE1qY8xXlIsqu1QA
+2025-03-10 08:01:09,566 - __main__ - INFO - Inserted document into Milvus for doc_id: 4bE1qY8xXlIsqu1QA
+2025-03-10 08:01:11,944 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2wHcN3sFm3LtBWMr9
+2025-03-10 08:01:11,969 - __main__ - INFO - Inserted document into Milvus for doc_id: 2wHcN3sFm3LtBWMr9
+2025-03-10 08:01:17,188 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=78IVledcPaW9Y3w8b
+2025-03-10 08:01:17,213 - __main__ - INFO - Inserted document into Milvus for doc_id: 78IVledcPaW9Y3w8b
+2025-03-10 08:01:22,072 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6Hv45crXsA7nIBDRB
+2025-03-10 08:01:22,095 - __main__ - INFO - Inserted document into Milvus for doc_id: 6Hv45crXsA7nIBDRB
+2025-03-10 08:01:26,666 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=1CrUu5gYyaoBxguW6
+2025-03-10 08:01:26,692 - __main__ - INFO - Inserted document into Milvus for doc_id: 1CrUu5gYyaoBxguW6
+2025-03-10 08:01:33,019 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2MDhmm6fvXYtzjksr
+2025-03-10 08:01:33,046 - __main__ - INFO - Inserted document into Milvus for doc_id: 2MDhmm6fvXYtzjksr
+2025-03-10 08:01:39,563 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=53kqZY9P7XfmG5yxC
+2025-03-10 08:01:39,588 - __main__ - INFO - Inserted document into Milvus for doc_id: 53kqZY9P7XfmG5yxC
+2025-03-10 08:02:02,453 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=232jmJwt3y9WzZTCW
+2025-03-10 08:02:02,478 - __main__ - INFO - Inserted document into Milvus for doc_id: 232jmJwt3y9WzZTCW
+2025-03-10 08:04:09,285 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6d7rhIbexzpbc4iDX
+2025-03-10 08:04:09,317 - __main__ - INFO - Inserted document into Milvus for doc_id: 6d7rhIbexzpbc4iDX
+2025-03-10 08:04:42,486 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2ao6Jp4Vg1nS4Zl3h
+2025-03-10 08:04:42,511 - __main__ - INFO - Inserted document into Milvus for doc_id: 2ao6Jp4Vg1nS4Zl3h
+2025-03-10 08:05:16,962 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2OQSC5MHurW1aFDCe
+2025-03-10 08:05:16,989 - __main__ - INFO - Inserted document into Milvus for doc_id: 2OQSC5MHurW1aFDCe
+2025-03-10 08:05:50,701 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3u9wM2oKzlhbtsXNj
+2025-03-10 08:05:50,726 - __main__ - INFO - Inserted document into Milvus for doc_id: 3u9wM2oKzlhbtsXNj
+2025-03-10 08:06:18,680 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7JLbfQwDCvDvhOQFl
+2025-03-10 08:06:18,707 - __main__ - INFO - Inserted document into Milvus for doc_id: 7JLbfQwDCvDvhOQFl
+2025-03-10 08:06:52,626 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6PFcfZePyv7zFG0br
+2025-03-10 08:06:52,652 - __main__ - INFO - Inserted document into Milvus for doc_id: 6PFcfZePyv7zFG0br
+2025-03-10 08:07:30,907 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3y8cHM6ZC5KZzwuUf
+2025-03-10 08:07:30,930 - __main__ - INFO - Inserted document into Milvus for doc_id: 3y8cHM6ZC5KZzwuUf
+2025-03-10 08:08:06,579 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=4huvP7tegwsn0mKLb
+2025-03-10 08:08:06,605 - __main__ - INFO - Inserted document into Milvus for doc_id: 4huvP7tegwsn0mKLb
+2025-03-10 08:08:45,550 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=1Q4uj1dL2iJa9aHur
+2025-03-10 08:08:45,576 - __main__ - INFO - Inserted document into Milvus for doc_id: 1Q4uj1dL2iJa9aHur
+2025-03-10 08:09:08,997 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3IVq9Ix1diKhT7tbr
+2025-03-10 08:09:09,022 - __main__ - INFO - Inserted document into Milvus for doc_id: 3IVq9Ix1diKhT7tbr
+2025-03-10 08:10:12,282 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=78j2nMrzOkAwS1As1
+2025-03-10 08:10:12,308 - __main__ - INFO - Inserted document into Milvus for doc_id: 78j2nMrzOkAwS1As1
+2025-03-10 08:10:48,195 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6LztOdcRco6Y7vCfe
+2025-03-10 08:10:48,219 - __main__ - INFO - Inserted document into Milvus for doc_id: 6LztOdcRco6Y7vCfe
+2025-03-10 08:11:23,630 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=4FqQ73OSSwM3rQdHN
+2025-03-10 08:11:23,664 - __main__ - INFO - Inserted document into Milvus for doc_id: 4FqQ73OSSwM3rQdHN
+2025-03-10 08:11:54,348 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5GtuvoKnwYSXJf5BW
+2025-03-10 08:11:54,374 - __main__ - INFO - Inserted document into Milvus for doc_id: 5GtuvoKnwYSXJf5BW
+2025-03-10 08:13:00,948 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5fcQlcHKEnuIrOznL
+2025-03-10 08:13:00,972 - __main__ - INFO - Inserted document into Milvus for doc_id: 5fcQlcHKEnuIrOznL
+2025-03-10 08:14:06,738 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=k3CFvmjYEnzkXDhZF
+2025-03-10 08:14:06,763 - __main__ - INFO - Inserted document into Milvus for doc_id: k3CFvmjYEnzkXDhZF
+2025-03-10 08:14:42,139 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6WAMwt1bnzjWRjwU9
+2025-03-10 08:14:42,165 - __main__ - INFO - Inserted document into Milvus for doc_id: 6WAMwt1bnzjWRjwU9
+2025-03-10 08:15:12,018 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5Ujm3nu020Tir555R
+2025-03-10 08:15:12,045 - __main__ - INFO - Inserted document into Milvus for doc_id: 5Ujm3nu020Tir555R
+2025-03-10 08:15:47,735 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=47G6Dr9wExYxLG1LD
+2025-03-10 08:15:47,762 - __main__ - INFO - Inserted document into Milvus for doc_id: 47G6Dr9wExYxLG1LD
+2025-03-10 08:16:19,183 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5x5daHd1iShJX8zo8
+2025-03-10 08:16:19,210 - __main__ - INFO - Inserted document into Milvus for doc_id: 5x5daHd1iShJX8zo8
+2025-03-10 08:16:50,620 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2pSCiYo4qUbvN4H4N
+2025-03-10 08:16:50,648 - __main__ - INFO - Inserted document into Milvus for doc_id: 2pSCiYo4qUbvN4H4N
+2025-03-10 08:17:57,643 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=6sC24XHqyEc6PAI6n
+2025-03-10 08:17:57,671 - __main__ - INFO - Inserted document into Milvus for doc_id: 6sC24XHqyEc6PAI6n
+2025-03-10 08:18:57,357 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=1VLwn9Yt6UDU3fCwY
+2025-03-10 08:18:57,382 - __main__ - INFO - Inserted document into Milvus for doc_id: 1VLwn9Yt6UDU3fCwY
+2025-03-10 08:19:29,867 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7aebNQVS03fGKQMzx
+2025-03-10 08:19:29,895 - __main__ - INFO - Inserted document into Milvus for doc_id: 7aebNQVS03fGKQMzx
+2025-03-10 08:20:07,675 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=1hGqiGK7V8awetxoa
+2025-03-10 08:20:07,699 - __main__ - INFO - Inserted document into Milvus for doc_id: 1hGqiGK7V8awetxoa
+2025-03-10 08:20:33,763 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=pwAxjpf4vPoOXE75k
+2025-03-10 08:20:33,788 - __main__ - INFO - Inserted document into Milvus for doc_id: pwAxjpf4vPoOXE75k
+2025-03-10 08:21:07,257 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3nVHEWp2iyDdD4Lfb
+2025-03-10 08:21:07,284 - __main__ - INFO - Inserted document into Milvus for doc_id: 3nVHEWp2iyDdD4Lfb
+2025-03-10 08:21:43,868 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3KUXfSAo6H1HVwznj
+2025-03-10 08:21:43,892 - __main__ - INFO - Inserted document into Milvus for doc_id: 3KUXfSAo6H1HVwznj
+2025-03-10 08:22:11,757 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=5bHS90uvDa3JpRqdj
+2025-03-10 08:22:11,782 - __main__ - INFO - Inserted document into Milvus for doc_id: 5bHS90uvDa3JpRqdj
+2025-03-10 08:22:45,781 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=1HclRxG2rvIYydt3Q
+2025-03-10 08:22:45,809 - __main__ - INFO - Inserted document into Milvus for doc_id: 1HclRxG2rvIYydt3Q
+2025-03-10 08:23:17,144 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=7UuMwi4e0noKOH3gV
+2025-03-10 08:23:17,175 - __main__ - INFO - Inserted document into Milvus for doc_id: 7UuMwi4e0noKOH3gV
+2025-03-10 08:23:49,586 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=3Elz7fYevEsEHA4hH
+2025-03-10 08:23:49,613 - __main__ - INFO - Inserted document into Milvus for doc_id: 3Elz7fYevEsEHA4hH
+2025-03-10 08:24:54,971 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=2uoxquMAa9nmOesLt
+2025-03-10 08:24:54,995 - __main__ - INFO - Inserted document into Milvus for doc_id: 2uoxquMAa9nmOesLt
+2025-03-10 08:28:04,554 - __main__ - INFO - Consumed message from Kafka topic summary-vectors: doc_id=4Yi65t2Iz5xHut35y
+2025-03-10 08:28:04,584 - __main__ - INFO - Inserted document into Milvus for doc_id: 4Yi65t2Iz5xHut35y

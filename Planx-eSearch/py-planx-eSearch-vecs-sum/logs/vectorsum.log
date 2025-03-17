@@ -1,0 +1,516 @@
+2025-03-10 01:46:16,305 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 01:46:16,306 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 01:46:16,306 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 01:46:16,413 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 01:46:16,414 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 01:46:16,422 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 01:46:16,423 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 01:46:16,423 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 01:46:16,531 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 01:46:16,531 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 01:46:16,532 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 01:46:16,600 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 01:46:16,600 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 01:46:16,606 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 01:46:16,607 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 01:46:16,608 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 01:46:16,610 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 01:46:16,613 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 01:46:16,715 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 01:46:16,716 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 01:46:16,817 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 01:46:16,825 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 01:46:16,827 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 01:46:16,828 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 01:46:16,830 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 4
+2025-03-10 01:46:16,831 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 01:46:16,832 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 01:51:16,528 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 01:51:16,530 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 01:51:16,530 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 04:44:26,010 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1HrmXnGiV9SVOpfy
+2025-03-10 04:44:26,015 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1HrmXnGiV9SVOpfy
+2025-03-10 06:27:31,416 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=doc_001
+2025-03-10 06:27:31,421 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: doc_001
+2025-03-10 06:27:38,022 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Wd1Ady2
+2025-03-10 06:27:38,024 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Wd1Ady2
+2025-03-10 06:28:07,534 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Wd1Ady2
+2025-03-10 06:28:07,536 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Wd1Ady2
+2025-03-10 06:28:48,119 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Wd1Ady215hLjbMO
+2025-03-10 06:28:48,121 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Wd1Ady215hLjbMO
+2025-03-10 06:29:28,421 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6jva1gykkTK1gP6J
+2025-03-10 06:29:28,426 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6jva1gykkTK1gP6J
+2025-03-10 06:29:35,209 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1NjCx8DEH7uJqFi0
+2025-03-10 06:29:35,212 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1NjCx8DEH7uJqFi0
+2025-03-10 06:32:25,357 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=277E2jVyjNQDUMEk
+2025-03-10 06:32:25,363 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 277E2jVyjNQDUMEk
+2025-03-10 06:32:45,563 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5uGnLMYt7smJrE6x
+2025-03-10 06:32:45,567 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5uGnLMYt7smJrE6x
+2025-03-10 06:33:52,990 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3KPzKY8OevjsbOXH
+2025-03-10 06:33:52,993 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3KPzKY8OevjsbOXH
+2025-03-10 06:34:32,128 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2t0K9pv8NxvYWh42
+2025-03-10 06:34:32,131 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2t0K9pv8NxvYWh42
+2025-03-10 06:34:50,478 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2GrEAv52BRvusDFF
+2025-03-10 06:34:50,483 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2GrEAv52BRvusDFF
+2025-03-10 06:35:41,641 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=69CsIqkGA3F6EV4V
+2025-03-10 06:35:41,647 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 69CsIqkGA3F6EV4V
+2025-03-10 06:36:42,011 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=RK2mbWMWulX2tls9
+2025-03-10 06:36:42,014 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: RK2mbWMWulX2tls9
+2025-03-10 06:37:17,797 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=277E2jVyjNQDUMEk
+2025-03-10 06:37:17,802 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 277E2jVyjNQDUMEk
+2025-03-10 06:38:47,230 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1NjCx8DEH7uJqFi0
+2025-03-10 06:38:47,235 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1NjCx8DEH7uJqFi0
+2025-03-10 06:39:34,864 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6GdKicP5k3omLXgr
+2025-03-10 06:39:34,867 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6GdKicP5k3omLXgr
+2025-03-10 06:39:57,409 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2q0b0ha1QHF9sKgz
+2025-03-10 06:39:57,412 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2q0b0ha1QHF9sKgz
+2025-03-10 06:42:19,317 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6CqJUjmE4pHxITi3
+2025-03-10 06:42:19,322 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6CqJUjmE4pHxITi3
+2025-03-10 06:45:00,774 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6jva1gykkTK1gP6J
+2025-03-10 06:45:00,779 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6jva1gykkTK1gP6J
+2025-03-10 06:46:46,615 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2dz704LWOmg0A7ib
+2025-03-10 06:46:46,620 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2dz704LWOmg0A7ib
+2025-03-10 07:05:03,873 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:05:03,874 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:05:03,875 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:05:03,980 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:05:03,980 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:05:03,983 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:05:03,983 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:05:03,984 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:05:04,087 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:05:04,087 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:05:04,088 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:05:04,131 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:05:04,131 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:05:04,136 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:05:04,137 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:05:04,138 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:05:04,139 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:05:04,142 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:05:04,243 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:05:04,244 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:05:04,344 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:05:04,349 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:05:04,350 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:05:04,351 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:05:04,353 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 6
+2025-03-10 07:05:04,353 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:05:04,354 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:10:04,090 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:10:04,092 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:10:04,092 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:13:05,316 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:13:05,317 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:13:05,317 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:13:05,421 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:13:05,422 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:13:05,427 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:13:05,430 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:13:05,431 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:13:05,537 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:13:05,538 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:13:05,539 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:13:05,600 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:13:05,600 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:13:05,606 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:13:05,607 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:13:05,609 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:13:05,610 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:13:05,614 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:13:05,717 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:13:05,718 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:13:05,820 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:13:05,826 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:13:05,828 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:13:05,830 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:13:05,832 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 8
+2025-03-10 07:13:05,833 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:13:05,834 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:17:03,464 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:17:03,465 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:17:03,465 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:17:03,570 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:17:03,571 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:17:03,579 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:17:03,581 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:17:03,582 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:17:03,688 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:17:03,688 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:17:03,689 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:17:03,762 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:17:03,762 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:17:03,767 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:17:03,768 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:17:03,769 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:17:03,771 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:17:03,774 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:17:03,776 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:17:03,776 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:17:03,877 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:17:03,882 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:17:03,884 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:17:03,884 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:17:03,886 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 10
+2025-03-10 07:17:03,886 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:17:03,887 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:22:03,588 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:22:03,591 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:22:03,592 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:23:12,202 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:23:12,202 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:23:12,202 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:23:12,306 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:23:12,306 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:23:12,310 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:23:12,312 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:23:12,313 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:23:12,417 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:23:12,417 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:23:12,418 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:23:12,478 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:23:12,478 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:23:12,485 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:23:12,487 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:23:12,488 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:23:12,490 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:23:12,493 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:23:12,503 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:23:12,505 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:23:12,611 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:23:12,616 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:23:12,618 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:23:12,620 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:23:12,621 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 12
+2025-03-10 07:23:12,622 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:23:12,623 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:26:48,435 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2dz704LWOmg0A7ib
+2025-03-10 07:26:48,443 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2dz704LWOmg0A7ib
+2025-03-10 07:26:48,448 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:26:48,449 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:26:48,449 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:27:33,610 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:27:33,611 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:27:33,612 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:27:33,716 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:27:33,716 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:27:33,720 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:27:33,721 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:27:33,721 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:27:33,825 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:27:33,825 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:27:33,827 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:27:33,873 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:27:33,873 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:27:33,879 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:27:33,881 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:27:33,882 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:27:33,883 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:27:33,891 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:27:33,992 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:27:33,993 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:27:34,095 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:27:34,099 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:27:34,101 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:27:34,102 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:27:34,104 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 14
+2025-03-10 07:27:34,105 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:27:34,105 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:27:34,213 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2dz704LWOmg0A7ib
+2025-03-10 07:27:34,216 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2dz704LWOmg0A7ib
+2025-03-10 07:27:34,217 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:27:34,219 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:27:34,220 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:31:53,530 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:31:53,531 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:31:53,531 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:31:53,636 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:31:53,636 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:31:53,640 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:31:53,640 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:31:53,641 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:31:53,747 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:31:53,747 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:31:53,748 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:31:53,792 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:31:53,792 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:31:53,796 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:31:53,797 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:31:53,798 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:31:53,799 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:31:53,802 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:31:53,803 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:31:53,803 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:31:53,905 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:31:53,909 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:31:53,911 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:31:53,912 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:31:53,913 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 16
+2025-03-10 07:31:53,914 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:31:53,914 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:34:50,087 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:34:50,088 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:34:50,088 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:34:50,193 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:34:50,193 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:34:50,196 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:34:50,197 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:34:50,197 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:34:50,300 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:34:50,300 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:34:50,301 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:34:50,345 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:34:50,348 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:34:50,349 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:34:50,372 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:34:50,373 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:34:50,375 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:34:50,378 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:34:50,480 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:34:50,481 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:34:50,582 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:34:50,586 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:34:50,587 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:34:50,588 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:34:50,589 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 18
+2025-03-10 07:34:50,590 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:34:50,591 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:36:04,278 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=doc_001
+2025-03-10 07:36:04,282 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: doc_001
+2025-03-10 07:36:04,283 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:36:04,286 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:36:04,286 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:36:04,288 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Wd1Ady2
+2025-03-10 07:36:04,290 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Wd1Ady2
+2025-03-10 07:36:04,293 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Wd1Ady2
+2025-03-10 07:36:04,295 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Wd1Ady2
+2025-03-10 07:36:04,339 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Wd1Ady215hLjbMO
+2025-03-10 07:36:04,341 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Wd1Ady215hLjbMO
+2025-03-10 07:36:04,379 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6jva1gykkTK1gP6J
+2025-03-10 07:36:04,381 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6jva1gykkTK1gP6J
+2025-03-10 07:36:04,389 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1NjCx8DEH7uJqFi0
+2025-03-10 07:36:04,391 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1NjCx8DEH7uJqFi0
+2025-03-10 07:36:04,408 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1HrmXnGiV9SVOpfy
+2025-03-10 07:36:04,410 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1HrmXnGiV9SVOpfy
+2025-03-10 07:36:04,437 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4oEMcTy8EuJrROP0
+2025-03-10 07:36:04,440 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4oEMcTy8EuJrROP0
+2025-03-10 07:36:48,522 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=50Tmg8itWURtS06i
+2025-03-10 07:36:48,525 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 50Tmg8itWURtS06i
+2025-03-10 07:51:18,821 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:18,822 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:51:18,824 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:18,929 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:51:18,930 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:51:18,939 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:18,941 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-10 07:51:18,942 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:19,049 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-10 07:51:19,050 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-10 07:51:19,052 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('vectors-to-summary',)
+2025-03-10 07:51:19,133 - __main__ - INFO - Starting Kafka consumer for topic: vectors-to-summary
+2025-03-10 07:51:19,134 - __main__ - INFO - Starting FastAPI application...
+2025-03-10 07:51:19,140 - kafka.cluster - INFO - Group coordinator for doc_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-10 07:51:19,141 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group doc_processing_group
+2025-03-10 07:51:19,143 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-10 07:51:19,145 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group doc_processing_group
+2025-03-10 07:51:19,149 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:19,251 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:19,252 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:51:19,353 - kafka.coordinator - INFO - (Re-)joining group doc_processing_group
+2025-03-10 07:51:19,360 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-10 07:51:19,362 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:51:19,363 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:51:19,366 - kafka.coordinator - INFO - Successfully joined group doc_processing_group with generation 20
+2025-03-10 07:51:19,367 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='vectors-to-summary', partition=0)]
+2025-03-10 07:51:19,368 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='vectors-to-summary', partition=0)} for group doc_processing_group
+2025-03-10 07:52:26,401 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1HrmXnGiV9SVOpfy
+2025-03-10 07:52:26,403 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1HrmXnGiV9SVOpfy
+2025-03-10 07:52:26,406 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-10 07:52:26,407 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-10 07:52:26,407 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-10 07:52:26,419 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4oEMcTy8EuJrROP0
+2025-03-10 07:52:26,421 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4oEMcTy8EuJrROP0
+2025-03-10 07:52:26,424 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1i4pT05sXWEPSoUa
+2025-03-10 07:52:26,425 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1i4pT05sXWEPSoUa
+2025-03-10 07:53:01,304 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=50Tmg8itWURtS06i
+2025-03-10 07:53:01,310 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 50Tmg8itWURtS06i
+2025-03-10 07:53:13,272 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3wvvCWrcvOejt8Tb
+2025-03-10 07:53:13,277 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3wvvCWrcvOejt8Tb
+2025-03-10 07:53:17,852 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5hYyg6cijXWZZUCg
+2025-03-10 07:53:17,854 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5hYyg6cijXWZZUCg
+2025-03-10 07:53:23,170 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=26FQ0VLWjDkTd3Ux
+2025-03-10 07:53:23,172 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 26FQ0VLWjDkTd3Ux
+2025-03-10 07:53:31,491 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=70Y093nLCMn02NPB
+2025-03-10 07:53:31,494 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 70Y093nLCMn02NPB
+2025-03-10 07:53:38,024 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3j8vnWFofDjFJT2h
+2025-03-10 07:53:38,028 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3j8vnWFofDjFJT2h
+2025-03-10 07:53:43,841 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6TVPgqlZZ3NSjZd6
+2025-03-10 07:53:43,845 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6TVPgqlZZ3NSjZd6
+2025-03-10 07:53:49,933 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5S6prEDxDZo0nnpg
+2025-03-10 07:53:49,935 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5S6prEDxDZo0nnpg
+2025-03-10 07:53:56,083 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2uyBus7Sncm4x4DW
+2025-03-10 07:53:56,087 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2uyBus7Sncm4x4DW
+2025-03-10 07:54:05,739 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7KtFqy2dbx9jtk3b
+2025-03-10 07:54:05,742 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7KtFqy2dbx9jtk3b
+2025-03-10 07:54:10,086 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=59pQWV9IbYD65TMP
+2025-03-10 07:54:10,089 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 59pQWV9IbYD65TMP
+2025-03-10 07:54:17,356 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=76GW79ybbswe3PKM
+2025-03-10 07:54:17,360 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 76GW79ybbswe3PKM
+2025-03-10 07:54:23,364 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7EkXpf97hlpZmu2K
+2025-03-10 07:54:23,368 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7EkXpf97hlpZmu2K
+2025-03-10 07:54:25,204 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=qzdF55F2Hjo95nMl
+2025-03-10 07:54:25,207 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: qzdF55F2Hjo95nMl
+2025-03-10 07:54:31,388 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=18h3MgsjO1sD7UhW
+2025-03-10 07:54:31,391 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 18h3MgsjO1sD7UhW
+2025-03-10 07:54:36,874 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2YBAeE8rYPJCLFgT
+2025-03-10 07:54:36,877 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2YBAeE8rYPJCLFgT
+2025-03-10 07:54:47,386 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3U97C40XhwCaNqKg
+2025-03-10 07:54:47,390 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3U97C40XhwCaNqKg
+2025-03-10 07:54:53,379 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6mS1pKgkQSl2QgMZ
+2025-03-10 07:54:53,382 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6mS1pKgkQSl2QgMZ
+2025-03-10 07:54:59,943 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3RnyQ2MYscs75PRO
+2025-03-10 07:54:59,948 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3RnyQ2MYscs75PRO
+2025-03-10 07:55:07,961 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3vskupw2lnWlNeHV
+2025-03-10 07:55:07,966 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3vskupw2lnWlNeHV
+2025-03-10 07:55:26,480 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7iWTs8E1xN5cVqTH
+2025-03-10 07:55:26,484 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7iWTs8E1xN5cVqTH
+2025-03-10 07:55:32,499 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5gqbkWRMzD3SsWhM
+2025-03-10 07:55:32,503 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5gqbkWRMzD3SsWhM
+2025-03-10 07:55:34,520 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5weqd0oRfX95gkrn
+2025-03-10 07:55:34,522 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5weqd0oRfX95gkrn
+2025-03-10 07:55:51,398 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7DL6IzxQTuZKIbkV
+2025-03-10 07:55:51,401 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7DL6IzxQTuZKIbkV
+2025-03-10 07:55:56,900 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2TXiEetnWTgYYj5J
+2025-03-10 07:55:56,903 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2TXiEetnWTgYYj5J
+2025-03-10 07:57:42,220 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1MNsOn5xq8enoWbO
+2025-03-10 07:57:42,226 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1MNsOn5xq8enoWbO
+2025-03-10 07:57:46,413 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=8vgJDw7Da4LZ7rjp
+2025-03-10 07:57:46,416 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 8vgJDw7Da4LZ7rjp
+2025-03-10 07:57:51,105 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2PM8ToxkFaW0wgJM
+2025-03-10 07:57:51,108 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2PM8ToxkFaW0wgJM
+2025-03-10 07:57:57,232 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=lHpPfzEOnDEdzq1d
+2025-03-10 07:57:57,237 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: lHpPfzEOnDEdzq1d
+2025-03-10 07:58:00,940 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6I9g0JKjB5GDx1ha
+2025-03-10 07:58:00,943 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6I9g0JKjB5GDx1ha
+2025-03-10 07:58:06,242 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7i7Rs86V8gn4ptAA
+2025-03-10 07:58:06,246 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7i7Rs86V8gn4ptAA
+2025-03-10 07:58:10,361 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Y3N2tPenGpHBRl6
+2025-03-10 07:58:10,364 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Y3N2tPenGpHBRl6
+2025-03-10 07:58:14,843 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=MXRXNOlwsi8zUdLD
+2025-03-10 07:58:14,845 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: MXRXNOlwsi8zUdLD
+2025-03-10 07:58:19,903 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=BNqLPkPTOlmwjnoe
+2025-03-10 07:58:19,906 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: BNqLPkPTOlmwjnoe
+2025-03-10 07:58:33,505 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6AZ03TCAf2uje7rq
+2025-03-10 07:58:33,507 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6AZ03TCAf2uje7rq
+2025-03-10 07:58:40,509 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7HEfJYUBinrblZ8O
+2025-03-10 07:58:40,511 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7HEfJYUBinrblZ8O
+2025-03-10 07:58:45,268 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6v8nOdhnhFi0PjzL
+2025-03-10 07:58:45,272 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6v8nOdhnhFi0PjzL
+2025-03-10 07:59:02,755 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6chaDEAxQfMP9E2X
+2025-03-10 07:59:02,757 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6chaDEAxQfMP9E2X
+2025-03-10 07:59:08,265 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5qPFopTnAe4FpOR5
+2025-03-10 07:59:08,267 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5qPFopTnAe4FpOR5
+2025-03-10 07:59:14,385 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7MXcVoRFbmLlYgLQ
+2025-03-10 07:59:14,389 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7MXcVoRFbmLlYgLQ
+2025-03-10 07:59:21,410 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2sDjqwooQy4IwW59
+2025-03-10 07:59:21,413 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2sDjqwooQy4IwW59
+2025-03-10 07:59:25,961 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=25oMEciVq2ver7oP
+2025-03-10 07:59:25,965 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 25oMEciVq2ver7oP
+2025-03-10 07:59:33,286 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6xhWOdZPKFpJY2BE
+2025-03-10 07:59:33,289 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6xhWOdZPKFpJY2BE
+2025-03-10 07:59:55,539 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=703GwGDdT8V4zkdi
+2025-03-10 07:59:55,541 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 703GwGDdT8V4zkdi
+2025-03-10 08:00:18,936 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3rIkxkLXf850sSOY
+2025-03-10 08:00:18,939 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3rIkxkLXf850sSOY
+2025-03-10 08:00:30,870 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2sW1rTBdvdRASVlq
+2025-03-10 08:00:30,873 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2sW1rTBdvdRASVlq
+2025-03-10 08:00:36,634 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=277E2jVyjNQDUMEk2
+2025-03-10 08:00:36,639 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 277E2jVyjNQDUMEk2
+2025-03-10 08:00:51,404 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=277E2jVyjNQDUMEk2
+2025-03-10 08:00:51,406 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 277E2jVyjNQDUMEk2
+2025-03-10 08:01:01,814 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6QJPGwuzczJ6BNkR1
+2025-03-10 08:01:01,816 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6QJPGwuzczJ6BNkR1
+2025-03-10 08:01:09,530 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4bE1qY8xXlIsqu1QA
+2025-03-10 08:01:09,533 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4bE1qY8xXlIsqu1QA
+2025-03-10 08:01:11,933 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2wHcN3sFm3LtBWMr9
+2025-03-10 08:01:11,936 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2wHcN3sFm3LtBWMr9
+2025-03-10 08:01:17,177 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=78IVledcPaW9Y3w8b
+2025-03-10 08:01:17,180 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 78IVledcPaW9Y3w8b
+2025-03-10 08:01:22,060 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6Hv45crXsA7nIBDRB
+2025-03-10 08:01:22,064 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6Hv45crXsA7nIBDRB
+2025-03-10 08:01:26,656 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1CrUu5gYyaoBxguW6
+2025-03-10 08:01:26,658 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1CrUu5gYyaoBxguW6
+2025-03-10 08:01:33,009 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2MDhmm6fvXYtzjksr
+2025-03-10 08:01:33,011 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2MDhmm6fvXYtzjksr
+2025-03-10 08:01:39,551 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=53kqZY9P7XfmG5yxC
+2025-03-10 08:01:39,555 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 53kqZY9P7XfmG5yxC
+2025-03-10 08:02:02,439 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=232jmJwt3y9WzZTCW
+2025-03-10 08:02:02,445 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 232jmJwt3y9WzZTCW
+2025-03-10 08:04:09,270 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6d7rhIbexzpbc4iDX
+2025-03-10 08:04:09,275 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6d7rhIbexzpbc4iDX
+2025-03-10 08:04:42,473 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2ao6Jp4Vg1nS4Zl3h
+2025-03-10 08:04:42,478 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2ao6Jp4Vg1nS4Zl3h
+2025-03-10 08:05:16,951 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2OQSC5MHurW1aFDCe
+2025-03-10 08:05:16,954 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2OQSC5MHurW1aFDCe
+2025-03-10 08:05:50,313 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3u9wM2oKzlhbtsXNj
+2025-03-10 08:05:50,316 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3u9wM2oKzlhbtsXNj
+2025-03-10 08:06:18,669 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7JLbfQwDCvDvhOQFl
+2025-03-10 08:06:18,672 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7JLbfQwDCvDvhOQFl
+2025-03-10 08:06:52,612 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6PFcfZePyv7zFG0br
+2025-03-10 08:06:52,618 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6PFcfZePyv7zFG0br
+2025-03-10 08:07:30,897 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3y8cHM6ZC5KZzwuUf
+2025-03-10 08:07:30,899 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3y8cHM6ZC5KZzwuUf
+2025-03-10 08:08:06,569 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4huvP7tegwsn0mKLb
+2025-03-10 08:08:06,571 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4huvP7tegwsn0mKLb
+2025-03-10 08:08:45,536 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1Q4uj1dL2iJa9aHur
+2025-03-10 08:08:45,542 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1Q4uj1dL2iJa9aHur
+2025-03-10 08:09:08,985 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3IVq9Ix1diKhT7tbr
+2025-03-10 08:09:08,988 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3IVq9Ix1diKhT7tbr
+2025-03-10 08:10:12,272 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=78j2nMrzOkAwS1As1
+2025-03-10 08:10:12,274 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 78j2nMrzOkAwS1As1
+2025-03-10 08:10:48,185 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6LztOdcRco6Y7vCfe
+2025-03-10 08:10:48,187 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6LztOdcRco6Y7vCfe
+2025-03-10 08:11:23,617 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4FqQ73OSSwM3rQdHN
+2025-03-10 08:11:23,621 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4FqQ73OSSwM3rQdHN
+2025-03-10 08:11:54,333 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5GtuvoKnwYSXJf5BW
+2025-03-10 08:11:54,339 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5GtuvoKnwYSXJf5BW
+2025-03-10 08:13:00,938 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5fcQlcHKEnuIrOznL
+2025-03-10 08:13:00,940 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5fcQlcHKEnuIrOznL
+2025-03-10 08:14:06,724 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=k3CFvmjYEnzkXDhZF
+2025-03-10 08:14:06,729 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: k3CFvmjYEnzkXDhZF
+2025-03-10 08:14:42,123 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6WAMwt1bnzjWRjwU9
+2025-03-10 08:14:42,130 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6WAMwt1bnzjWRjwU9
+2025-03-10 08:15:12,007 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5Ujm3nu020Tir555R
+2025-03-10 08:15:12,009 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5Ujm3nu020Tir555R
+2025-03-10 08:15:47,721 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=47G6Dr9wExYxLG1LD
+2025-03-10 08:15:47,726 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 47G6Dr9wExYxLG1LD
+2025-03-10 08:16:19,169 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5x5daHd1iShJX8zo8
+2025-03-10 08:16:19,174 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5x5daHd1iShJX8zo8
+2025-03-10 08:16:50,608 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2pSCiYo4qUbvN4H4N
+2025-03-10 08:16:50,611 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2pSCiYo4qUbvN4H4N
+2025-03-10 08:17:57,632 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=6sC24XHqyEc6PAI6n
+2025-03-10 08:17:57,635 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 6sC24XHqyEc6PAI6n
+2025-03-10 08:18:57,344 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1VLwn9Yt6UDU3fCwY
+2025-03-10 08:18:57,349 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1VLwn9Yt6UDU3fCwY
+2025-03-10 08:19:29,850 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7aebNQVS03fGKQMzx
+2025-03-10 08:19:29,857 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7aebNQVS03fGKQMzx
+2025-03-10 08:20:07,665 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1hGqiGK7V8awetxoa
+2025-03-10 08:20:07,668 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1hGqiGK7V8awetxoa
+2025-03-10 08:20:33,753 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=pwAxjpf4vPoOXE75k
+2025-03-10 08:20:33,755 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: pwAxjpf4vPoOXE75k
+2025-03-10 08:21:07,244 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3nVHEWp2iyDdD4Lfb
+2025-03-10 08:21:07,248 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3nVHEWp2iyDdD4Lfb
+2025-03-10 08:21:43,856 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3KUXfSAo6H1HVwznj
+2025-03-10 08:21:43,861 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3KUXfSAo6H1HVwznj
+2025-03-10 08:22:11,746 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=5bHS90uvDa3JpRqdj
+2025-03-10 08:22:11,748 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 5bHS90uvDa3JpRqdj
+2025-03-10 08:22:45,769 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=1HclRxG2rvIYydt3Q
+2025-03-10 08:22:45,771 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 1HclRxG2rvIYydt3Q
+2025-03-10 08:23:17,132 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=7UuMwi4e0noKOH3gV
+2025-03-10 08:23:17,135 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 7UuMwi4e0noKOH3gV
+2025-03-10 08:23:49,574 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=3Elz7fYevEsEHA4hH
+2025-03-10 08:23:49,578 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 3Elz7fYevEsEHA4hH
+2025-03-10 08:24:54,957 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=2uoxquMAa9nmOesLt
+2025-03-10 08:24:54,963 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 2uoxquMAa9nmOesLt
+2025-03-10 08:28:04,542 - __main__ - INFO - Consumed message from Kafka topic vectors-to-summary: doc_id=4Yi65t2Iz5xHut35y
+2025-03-10 08:28:04,547 - __main__ - INFO - Processed and sent to Kafka topic summary-vectors: 4Yi65t2Iz5xHut35y

@@ -1,0 +1,95 @@
+nohup: ignoring input
+INFO:     Started server process [619468]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.1.235:57541 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.1.235:57541 - "GET /openapi.json HTTP/1.1" 200 OK
+2025-03-03 08:47:55,815 - config.config - INFO - Received request: text length=823, keyword_count=10
+2025-03-03 08:47:55,817 - config.config - INFO - Querying LLM with prompt: Extract the top 10 keywords from this text: Cookin... and keyword_count: 10
+2025-03-03 08:47:55,817 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 08:47:59,759 - config.config - INFO - AI response received successfully
+2025-03-03 08:47:59,761 - config.config - INFO - Filtered keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'restaurant']
+2025-03-03 08:47:59,761 - config.config - INFO - Returning keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'restaurant']
+INFO:     192.168.1.222:51687 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+2025-03-03 08:51:34,884 - config.config - INFO - Received request: text length=823, keyword_count=20
+2025-03-03 08:51:34,885 - config.config - INFO - Querying LLM with prompt: Extract the top 20 keywords from this text: Cookin... and keyword_count: 20
+2025-03-03 08:51:34,885 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 08:51:35,791 - config.config - INFO - AI response received successfully
+2025-03-03 08:51:35,792 - config.config - INFO - Filtered keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-03 08:51:35,792 - config.config - INFO - Returning keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+INFO:     192.168.1.222:52217 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+2025-03-03 08:52:14,268 - config.config - INFO - Received request: text length=823, keyword_count=20
+2025-03-03 08:52:14,268 - config.config - INFO - Querying LLM with prompt: Extract the top 20 keywords from this text: Cookin... and keyword_count: 20
+2025-03-03 08:52:14,268 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 08:52:15,132 - config.config - INFO - AI response received successfully
+2025-03-03 08:52:15,133 - config.config - INFO - Filtered keywords: ['recipe', 'meal', 'food', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchens', 'cooks', 'meats', 'vegetables', 'herbs']
+2025-03-03 08:52:15,133 - config.config - INFO - Returning keywords: ['recipe', 'meal', 'food', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchens', 'cooks', 'meats', 'vegetables', 'herbs']
+INFO:     192.168.1.222:52334 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+2025-03-03 08:53:17,024 - config.config - INFO - Received request: text length=823, keyword_count=20
+2025-03-03 08:53:17,024 - config.config - INFO - Querying LLM with prompt: Extract the top 20 keywords from this text: Cookin... and keyword_count: 20
+2025-03-03 08:53:17,025 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 08:53:17,886 - config.config - INFO - AI response received successfully
+2025-03-03 08:53:17,888 - config.config - INFO - Filtered keywords: ['meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'cooks', 'kitchens', 'family', 'dinner', 'restaurant']
+2025-03-03 08:53:17,888 - config.config - INFO - Returning keywords: ['meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'cooks', 'kitchens', 'family', 'dinner', 'restaurant']
+INFO:     192.168.1.222:52477 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+2025-03-03 10:28:54,976 - config.config - INFO - Received request: text length=823, keyword_count=10
+2025-03-03 10:28:54,977 - config.config - INFO - Querying LLM with prompt: Extract the top 10 keywords from this text: Cookin... and keyword_count: 10
+2025-03-03 10:28:54,977 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 10:28:58,839 - config.config - INFO - AI response received successfully
+2025-03-03 10:28:58,840 - config.config - INFO - Filtered keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques']
+2025-03-03 10:28:58,840 - config.config - INFO - Returning keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques']
+INFO:     192.168.1.57:65494 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+2025-03-03 10:29:04,571 - config.config - INFO - Received request: text length=823, keyword_count=10
+2025-03-03 10:29:04,571 - config.config - INFO - Querying LLM with prompt: Extract the top 10 keywords from this text: Cookin... and keyword_count: 10
+2025-03-03 10:29:04,572 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 10:29:05,098 - config.config - INFO - AI response received successfully
+2025-03-03 10:29:05,099 - config.config - INFO - Filtered keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'restaurant']
+2025-03-03 10:29:05,099 - config.config - INFO - Returning keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'restaurant']
+INFO:     192.168.1.57:65495 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+INFO:     192.168.1.57:49375 - "POST /extract_keywords/ HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.1.57:49376 - "POST /extract_keywords/ HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.1.57:49381 - "POST /extract_keywords/ HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.1.57:49382 - "POST /extract_keywords/ HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.1.57:49385 - "POST /extract_keywords/ HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.1.57:49390 - "POST /extract_keywords/ HTTP/1.1" 422 Unprocessable Entity
+2025-03-03 10:31:28,330 - config.config - INFO - Received request: text length=458, keyword_count=10
+2025-03-03 10:31:28,330 - config.config - INFO - Querying LLM with prompt: Extract the top 10 keywords from this text: Bruise... and keyword_count: 10
+2025-03-03 10:31:28,330 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 10:31:28,927 - config.config - INFO - AI response received successfully
+2025-03-03 10:31:28,928 - config.config - INFO - Filtered keywords: ['zelensky', 'ukrainian', 'trump', 'vance', 'stansted', 'airport', 'british', 'summit', 'leaders', 'president']
+2025-03-03 10:31:28,928 - config.config - INFO - Returning keywords: ['zelensky', 'ukrainian', 'trump', 'vance', 'stansted', 'airport', 'british', 'summit', 'leaders', 'president']
+INFO:     192.168.1.57:49517 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+2025-03-03 10:33:21,041 - config.config - INFO - Received request: text length=4519, keyword_count=10
+2025-03-03 10:33:21,042 - config.config - INFO - Querying LLM with prompt: Extract the top 10 keywords from this text: Bruise... and keyword_count: 10
+2025-03-03 10:33:21,042 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 10:33:21,814 - config.config - INFO - AI response received successfully
+2025-03-03 10:33:21,815 - config.config - INFO - Filtered keywords: ['zelensky', 'ukraine', 'trump', 'macron', 'uk', 'us', 'russia', 'putin', 'nato', 'war']
+2025-03-03 10:33:21,815 - config.config - INFO - Returning keywords: ['zelensky', 'ukraine', 'trump', 'macron', 'uk', 'us', 'russia', 'putin', 'nato', 'war']
+INFO:     192.168.1.57:49544 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+2025-03-03 10:39:30,864 - config.config - INFO - Received request: text length=2115, keyword_count=10
+2025-03-03 10:39:30,864 - config.config - INFO - Querying LLM with prompt: Extract the top 10 keywords from this text: BREAKI... and keyword_count: 10
+2025-03-03 10:39:30,864 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-03 10:39:31,536 - config.config - INFO - AI response received successfully
+2025-03-03 10:39:31,536 - config.config - INFO - Filtered keywords: ['cryptocurrency', 'tokens', 'governance', 'market', 'economy', 'investors', 'gdp', 'bitcoin', 'ethereum', 'blockchain']
+2025-03-03 10:39:31,537 - config.config - INFO - Returning keywords: ['cryptocurrency', 'tokens', 'governance', 'market', 'economy', 'investors', 'gdp', 'bitcoin', 'ethereum', 'blockchain']
+INFO:     192.168.1.57:49801 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+INFO:     192.168.1.235:53573 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.1.235:53573 - "GET /openapi.json HTTP/1.1" 200 OK
+2025-03-04 06:29:06,515 - config.config - INFO - Received request: text length=823, keyword_count=20
+2025-03-04 06:29:06,516 - config.config - INFO - Querying LLM with prompt: Extract the top 20 keywords from this text: Cookin... and keyword_count: 20
+2025-03-04 06:29:06,516 - config.config - INFO - Requesting AI response with model: llama3.1:latest, stream: False
+2025-03-04 06:29:10,953 - config.config - INFO - AI response received successfully
+2025-03-04 06:29:10,954 - config.config - INFO - Filtered keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchens', 'home', 'cooks', 'meat']
+2025-03-04 06:29:10,954 - config.config - INFO - Returning keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchens', 'home', 'cooks', 'meat']
+INFO:     192.168.1.235:47223 - "POST /extract_keywords/ HTTP/1.1" 200 OK
+INFO:     192.168.1.235:58740 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.1.235:58740 - "GET /openapi.json HTTP/1.1" 200 OK
+2025-03-04 09:28:27,047 - config.config - INFO - Received request: text length=6, keyword_count=20
+2025-03-04 09:28:27,048 - config.config - INFO - Querying LLM with prompt: Extract the top 20 keywords from this text: string... and keyword_count: 20
+2025-03-04 09:28:27,049 - config.config - INFO - Requesting AI response with model: llama3.3:latest, stream: False
+2025-03-04 09:29:24,234 - config.config - INFO - AI response received successfully
+2025-03-04 09:29:24,236 - config.config - INFO - Insufficient keywords (1/20): ['string']
+2025-03-04 09:29:24,236 - config.config - INFO - Filtered keywords: ['string', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default']
+2025-03-04 09:29:24,237 - config.config - INFO - Returning keywords: ['string', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default', 'default']
+INFO:     192.168.1.235:58739 - "POST /extract_keywords/ HTTP/1.1" 200 OK

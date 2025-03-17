@@ -1,0 +1,225 @@
+2025-03-03 07:49:22,628 - main - INFO - Loading Word2Vec model...
+2025-03-03 07:49:22,628 - gensim.models.keyedvectors - INFO - loading projection weights from /home/intern/public/GoogleNews-vectors-negative300.bin.gz
+2025-03-03 07:50:27,017 - gensim.utils - INFO - KeyedVectors lifecycle event {'msg': 'loaded (3000000, 300) matrix of type float32 from /home/intern/public/GoogleNews-vectors-negative300.bin.gz', 'binary': True, 'encoding': 'utf8', 'datetime': '2025-03-03T07:50:26.715472', 'gensim': '4.3.3', 'python': '3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', 'platform': 'Linux-5.4.0-205-generic-x86_64-with-glibc2.31', 'event': 'load_word2vec_format'}
+2025-03-03 07:50:27,019 - main - INFO - Word2Vec model loaded successfully
+2025-03-03 08:56:50,577 - main - INFO - Loading Word2Vec model...
+2025-03-03 08:56:50,577 - gensim.models.keyedvectors - INFO - loading projection weights from /home/intern/public/GoogleNews-vectors-negative300.bin.gz
+2025-03-03 08:57:56,816 - gensim.utils - INFO - KeyedVectors lifecycle event {'msg': 'loaded (3000000, 300) matrix of type float32 from /home/intern/public/GoogleNews-vectors-negative300.bin.gz', 'binary': True, 'encoding': 'utf8', 'datetime': '2025-03-03T08:57:56.508729', 'gensim': '4.3.3', 'python': '3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', 'platform': 'Linux-5.4.0-205-generic-x86_64-with-glibc2.31', 'event': 'load_word2vec_format'}
+2025-03-03 08:57:56,818 - main - INFO - Word2Vec model loaded successfully
+2025-03-03 08:58:41,087 - main - INFO - Received request with keywords: ['ai', 'machinelearning', 'data', 'healthcare', 'finance']
+2025-03-03 08:58:41,096 - main - INFO - Similarity stats: range=0.3457886278629303, variance=0.013990798033773899, std_dev=0.11828270554542542
+2025-03-03 08:58:41,096 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.3457886278629303, 'variance': 0.013990798033773899, 'std_dev': 0.11828270554542542}
+2025-03-03 08:58:53,110 - main - INFO - Received request with keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-03 08:58:53,114 - main - INFO - Similarity stats: range=0.6295720338821411, variance=0.021898068487644196, std_dev=0.1479799598455429
+2025-03-03 08:58:53,114 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6295720338821411, 'variance': 0.021898068487644196, 'std_dev': 0.1479799598455429}
+2025-03-03 09:13:34,053 - main - INFO - Received request with keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-03 09:13:34,056 - main - INFO - Similarity stats: range=0.6295720338821411, variance=0.021898068487644196, std_dev=0.1479799598455429
+2025-03-03 09:13:34,057 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6295720338821411, 'variance': 0.021898068487644196, 'std_dev': 0.1479799598455429}
+2025-03-04 03:10:53,397 - main - INFO - Received request with keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-04 03:10:53,404 - main - INFO - Similarity stats: range=0.6295720338821411, variance=0.021898068487644196, std_dev=0.1479799598455429
+2025-03-04 03:10:53,405 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6295720338821411, 'variance': 0.021898068487644196, 'std_dev': 0.1479799598455429}
+2025-03-04 06:24:10,462 - main - INFO - Received request with keywords: ['cooking', 'meal', 'food', 'recipe', 'ingredients', 'dish', 'chefs', 'cuisine', 'flavors', 'techniques', 'taste', 'aroma', 'texture', 'presentation', 'restaurants', 'dining', 'kitchen', 'meat', 'vegetable', 'seasonal']
+2025-03-04 06:24:10,470 - main - INFO - Similarity stats: range=0.6295720338821411, variance=0.021898068487644196, std_dev=0.1479799598455429
+2025-03-04 06:24:10,470 - main - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6295720338821411, 'variance': 0.021898068487644196, 'std_dev': 0.1479799598455429}
+2025-03-05 05:35:16,332 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-05 05:35:16,332 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-05 05:35:16,332 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-05 05:35:16,437 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-05 05:35:16,437 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-05 05:35:16,445 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-05 05:35:16,448 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-05 05:35:16,448 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-05 05:35:16,552 - kafka.conn - INFO - Broker version identified as 2.1.0
+2025-03-05 05:35:16,553 - kafka.conn - INFO - Set configuration api_version=(2, 1, 0) to skip auto check_version requests on startup
+2025-03-05 05:35:16,554 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('keywords-to-vectors',)
+2025-03-05 05:35:16,556 - __main__ - INFO - Loading Word2Vec model...
+2025-03-05 05:35:16,556 - gensim.models.keyedvectors - INFO - loading projection weights from /home/intern/public/GoogleNews-vectors-negative300.bin.gz
+2025-03-05 05:36:18,580 - gensim.utils - INFO - KeyedVectors lifecycle event {'msg': 'loaded (3000000, 300) matrix of type float32 from /home/intern/public/GoogleNews-vectors-negative300.bin.gz', 'binary': True, 'encoding': 'utf8', 'datetime': '2025-03-05T05:36:18.255409', 'gensim': '4.3.3', 'python': '3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', 'platform': 'Linux-5.4.0-205-generic-x86_64-with-glibc2.31', 'event': 'load_word2vec_format'}
+2025-03-05 05:36:18,582 - __main__ - INFO - Word2Vec model loaded successfully
+2025-03-05 05:36:18,905 - __main__ - INFO - Produced data to Kafka topic keywords-to-vectors: doc_001
+2025-03-05 05:36:18,909 - __main__ - INFO - Starting Kafka consumer for topic: keywords-to-vectors
+2025-03-05 05:36:18,909 - __main__ - INFO - Starting FastAPI application...
+2025-03-05 05:36:18,918 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-05 05:36:18,920 - kafka.cluster - INFO - Group coordinator for vector_processing_group is BrokerMetadata(nodeId='coordinator-0', host='bigdata-kafka', port=9092, rack=None)
+2025-03-05 05:36:18,924 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-05 05:36:18,924 - kafka.coordinator - INFO - Discovered coordinator coordinator-0 for group vector_processing_group
+2025-03-05 05:36:18,925 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-05 05:36:18,927 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-03-05 05:36:18,930 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group vector_processing_group
+2025-03-05 05:36:18,935 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-05 05:36:19,039 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=coordinator-0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-05 05:36:19,039 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=bootstrap-0 host=192.168.1.206:9092 <connected> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. 
+2025-03-05 05:36:19,140 - kafka.coordinator - INFO - (Re-)joining group vector_processing_group
+2025-03-05 05:36:19,146 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-03-05 05:36:19,148 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to bigdata-kafka:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-05 05:36:19,148 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.0.5, node_id=0 host=bigdata-kafka:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Connection complete.
+2025-03-05 05:36:19,151 - kafka.coordinator - INFO - Successfully joined group vector_processing_group with generation 1
+2025-03-05 05:36:19,151 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='keywords-to-vectors', partition=0), TopicPartition(topic='keywords-to-vectors', partition=1), TopicPartition(topic='keywords-to-vectors', partition=2)]
+2025-03-05 05:36:19,152 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='keywords-to-vectors', partition=0), TopicPartition(topic='keywords-to-vectors', partition=1), TopicPartition(topic='keywords-to-vectors', partition=2)} for group vector_processing_group
+2025-03-05 05:36:19,276 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=doc_001
+2025-03-05 05:36:19,292 - __main__ - INFO - Similarity stats: range=0.6168047785758972, variance=0.020193755626678467, std_dev=0.14210473001003265
+2025-03-05 05:36:19,295 - __main__ - INFO - Similarity stats: range=0.47868531942367554, variance=0.011430155485868454, std_dev=0.10691190510988235
+2025-03-05 05:36:19,297 - __main__ - INFO - Similarity stats: range=0.9951686859130859, variance=0.20589521527290344, std_dev=0.45375677943229675
+2025-03-05 05:36:19,304 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: doc_001
+2025-03-05 05:36:19,314 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=3Wd1Ady2
+2025-03-05 05:36:19,320 - __main__ - INFO - Similarity stats: range=0.7347866296768188, variance=0.02936694212257862, std_dev=0.1713678538799286
+2025-03-05 05:36:19,327 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 3Wd1Ady2
+2025-03-05 05:36:19,327 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=doc_001
+2025-03-05 05:36:19,328 - __main__ - WARNING - No keywords found in Word2Vec model for block 1
+2025-03-05 05:36:19,328 - __main__ - WARNING - No keywords found in Word2Vec model for block 2
+2025-03-05 05:36:19,328 - __main__ - WARNING - No keywords found in Word2Vec model for block 3
+2025-03-05 05:36:19,329 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: doc_001
+2025-03-05 05:36:19,334 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=3Wd1Ady2
+2025-03-05 05:36:19,338 - __main__ - INFO - Similarity stats: range=0.5870159268379211, variance=0.013441856019198895, std_dev=0.11593902111053467
+2025-03-05 05:36:19,339 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 3Wd1Ady2
+2025-03-05 06:49:38,496 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=3Wd1Ady2
+2025-03-05 06:49:38,505 - __main__ - INFO - Similarity stats: range=0.6183547377586365, variance=0.019013701006770134, std_dev=0.13789017498493195
+2025-03-05 06:49:38,508 - __main__ - INFO - Similarity stats: range=0.558001697063446, variance=0.02086973749101162, std_dev=0.14446361362934113
+2025-03-05 06:49:38,512 - __main__ - INFO - Similarity stats: range=0.6843184232711792, variance=0.01759941689670086, std_dev=0.1326627880334854
+2025-03-05 06:49:38,515 - __main__ - INFO - Similarity stats: range=1.0284196138381958, variance=0.07025627791881561, std_dev=0.2650589942932129
+2025-03-05 06:49:38,518 - __main__ - INFO - Similarity stats: range=0.4564654529094696, variance=0.007194580044597387, std_dev=0.08482087403535843
+2025-03-05 06:49:38,523 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 3Wd1Ady2
+2025-03-05 07:12:45,126 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=3Wd1Ady215hLjbMO
+2025-03-05 07:12:45,135 - __main__ - INFO - Similarity stats: range=0.6225475668907166, variance=0.008557009510695934, std_dev=0.0925041064620018
+2025-03-05 07:12:45,137 - __main__ - INFO - Similarity stats: range=1.0729303359985352, variance=0.015007341280579567, std_dev=0.12250445783138275
+2025-03-05 07:12:45,139 - __main__ - INFO - Similarity stats: range=0.6133467555046082, variance=0.01057769637554884, std_dev=0.10284792631864548
+2025-03-05 07:12:45,142 - __main__ - INFO - Similarity stats: range=0.5313083529472351, variance=0.00799091812223196, std_dev=0.08939193189144135
+2025-03-05 07:12:45,144 - __main__ - INFO - Similarity stats: range=0.6916583776473999, variance=0.010907542891800404, std_dev=0.10443918406963348
+2025-03-05 07:12:45,147 - __main__ - INFO - Similarity stats: range=1.0843355655670166, variance=0.015388388186693192, std_dev=0.12404993921518326
+2025-03-05 07:12:45,149 - __main__ - INFO - Similarity stats: range=0.5032881498336792, variance=0.009314199909567833, std_dev=0.09651010483503342
+2025-03-05 07:12:45,151 - __main__ - INFO - Similarity stats: range=0.8137205839157104, variance=0.010102775879204273, std_dev=0.1005125641822815
+2025-03-05 07:12:45,154 - __main__ - INFO - Similarity stats: range=0.6615108251571655, variance=0.011888246051967144, std_dev=0.10903323441743851
+2025-03-05 07:12:45,156 - __main__ - INFO - Similarity stats: range=0.6663443446159363, variance=0.014463265426456928, std_dev=0.12026331573724747
+2025-03-05 07:12:45,164 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 3Wd1Ady215hLjbMO
+2025-03-05 07:27:16,060 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=3Wd1Ady215hLjbMO
+2025-03-05 07:27:16,068 - __main__ - INFO - Similarity stats: range=0.4837876856327057, variance=0.0074608162976801395, std_dev=0.08637601882219315
+2025-03-05 07:27:16,071 - __main__ - INFO - Similarity stats: range=0.6617617607116699, variance=0.010846185497939587, std_dev=0.10414502024650574
+2025-03-05 07:27:16,074 - __main__ - INFO - Similarity stats: range=0.6133467555046082, variance=0.01057769637554884, std_dev=0.10284792631864548
+2025-03-05 07:27:16,076 - __main__ - INFO - Similarity stats: range=1.096470832824707, variance=0.010725971311330795, std_dev=0.10356626659631729
+2025-03-05 07:27:16,079 - __main__ - INFO - Similarity stats: range=0.46143651008605957, variance=0.0072783492505550385, std_dev=0.08531324565410614
+2025-03-05 07:27:16,081 - __main__ - INFO - Similarity stats: range=0.675450325012207, variance=0.01021257322281599, std_dev=0.1010572761297226
+2025-03-05 07:27:16,086 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 3Wd1Ady215hLjbMO
+2025-03-05 07:28:10,563 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=3Wd1Ady215hLjbMO
+2025-03-05 07:28:10,568 - __main__ - INFO - Similarity stats: range=0.5300104022026062, variance=0.009456846863031387, std_dev=0.09724631905555725
+2025-03-05 07:28:10,571 - __main__ - INFO - Similarity stats: range=1.0555607080459595, variance=0.010320416651666164, std_dev=0.10158944875001907
+2025-03-05 07:28:10,574 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 3Wd1Ady215hLjbMO
+2025-03-05 07:33:50,807 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=6GdKicP5k3omLXgr
+2025-03-05 07:33:50,815 - __main__ - INFO - Similarity stats: range=0.42133498191833496, variance=0.008835186250507832, std_dev=0.09399566799402237
+2025-03-05 07:33:50,818 - __main__ - INFO - Similarity stats: range=0.7237588167190552, variance=0.01289072073996067, std_dev=0.11353731155395508
+2025-03-05 07:33:50,822 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 6GdKicP5k3omLXgr
+2025-03-05 07:34:08,169 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=6jva1gykkTK1gP6J
+2025-03-05 07:34:08,173 - __main__ - INFO - Similarity stats: range=0.4743604063987732, variance=0.011301284655928612, std_dev=0.1063074991106987
+2025-03-05 07:34:08,176 - __main__ - INFO - Similarity stats: range=0.3294224739074707, variance=0.00721392035484314, std_dev=0.08493480086326599
+2025-03-05 07:34:08,178 - __main__ - INFO - Similarity stats: range=0.36208203434944153, variance=0.007714548613876104, std_dev=0.0878325030207634
+2025-03-05 07:34:08,181 - __main__ - INFO - Similarity stats: range=0.3031873404979706, variance=0.005034753121435642, std_dev=0.07095599174499512
+2025-03-05 07:34:08,184 - __main__ - INFO - Similarity stats: range=0.33335617184638977, variance=0.009451554156839848, std_dev=0.09721910208463669
+2025-03-05 07:34:08,186 - __main__ - INFO - Similarity stats: range=0.3317631185054779, variance=0.0072083002887666225, std_dev=0.08490171283483505
+2025-03-05 07:34:08,191 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 6jva1gykkTK1gP6J
+2025-03-05 07:40:51,021 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=1NjCx8DEH7uJqFi0
+2025-03-05 07:40:51,029 - __main__ - INFO - Similarity stats: range=0.3169175386428833, variance=0.00646183080971241, std_dev=0.08038551360368729
+2025-03-05 07:40:51,031 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 1NjCx8DEH7uJqFi0
+2025-03-05 07:49:58,077 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=6CqJUjmE4pHxITi3
+2025-03-05 07:49:58,086 - __main__ - INFO - Similarity stats: range=0.4987318813800812, variance=0.009369135834276676, std_dev=0.09679429978132248
+2025-03-05 07:49:58,088 - __main__ - INFO - Similarity stats: range=0.587189257144928, variance=0.02270505763590336, std_dev=0.1506819725036621
+2025-03-05 07:49:58,091 - __main__ - INFO - Similarity stats: range=0.5632328391075134, variance=0.011650517582893372, std_dev=0.10793756693601608
+2025-03-05 07:49:58,094 - __main__ - INFO - Similarity stats: range=0.454881876707077, variance=0.008406206034123898, std_dev=0.09168536216020584
+2025-03-05 07:49:58,098 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 6CqJUjmE4pHxITi3
+2025-03-05 07:50:40,735 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=277E2jVyjNQDUMEk
+2025-03-05 07:50:40,738 - __main__ - INFO - Similarity stats: range=0.6187874674797058, variance=0.01527109183371067, std_dev=0.12357626110315323
+2025-03-05 07:50:40,741 - __main__ - INFO - Similarity stats: range=0.6682144403457642, variance=0.01790829934179783, std_dev=0.13382188975811005
+2025-03-05 07:50:40,743 - __main__ - INFO - Similarity stats: range=0.4061397612094879, variance=0.012050517834722996, std_dev=0.10977485030889511
+2025-03-05 07:50:40,745 - __main__ - INFO - Similarity stats: range=0.6222259402275085, variance=0.011904632672667503, std_dev=0.1091083511710167
+2025-03-05 07:50:40,748 - __main__ - INFO - Similarity stats: range=1.0334655046463013, variance=0.054596252739429474, std_dev=0.23365840315818787
+2025-03-05 07:50:40,750 - __main__ - INFO - Similarity stats: range=0.37616151571273804, variance=0.01653292588889599, std_dev=0.12858042120933533
+2025-03-05 07:50:40,752 - __main__ - INFO - Similarity stats: range=0.8057199120521545, variance=0.01857791095972061, std_dev=0.13630081713199615
+2025-03-05 07:50:40,754 - __main__ - INFO - Similarity stats: range=0.7606356143951416, variance=0.02221646159887314, std_dev=0.14905187487602234
+2025-03-05 07:50:40,760 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 277E2jVyjNQDUMEk
+2025-03-05 07:52:59,292 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=5uGnLMYt7smJrE6x
+2025-03-05 07:52:59,299 - __main__ - INFO - Similarity stats: range=0.4005773961544037, variance=0.012071212753653526, std_dev=0.10986907035112381
+2025-03-05 07:52:59,301 - __main__ - INFO - Similarity stats: range=0.1618317812681198, variance=0.004292364697903395, std_dev=0.0655161440372467
+2025-03-05 07:52:59,303 - __main__ - INFO - Similarity stats: range=0.9219121932983398, variance=0.19758771359920502, std_dev=0.4445084035396576
+2025-03-05 07:52:59,307 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 5uGnLMYt7smJrE6x
+2025-03-05 07:55:36,427 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=2ETjH5CEwRWKUqct
+2025-03-05 07:55:36,435 - __main__ - INFO - Similarity stats: range=0.33073604106903076, variance=0.0071421219035983086, std_dev=0.08451107889413834
+2025-03-05 07:55:36,437 - __main__ - INFO - Similarity stats: range=0.6026585102081299, variance=0.01369831245392561, std_dev=0.11703979223966599
+2025-03-05 07:55:36,440 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 2ETjH5CEwRWKUqct
+2025-03-05 07:55:57,178 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=2ETjH5CEwRWKUqct
+2025-03-05 07:55:57,182 - __main__ - INFO - Similarity stats: range=0.6034294962882996, variance=0.015580867417156696, std_dev=0.12482334673404694
+2025-03-05 07:55:57,185 - __main__ - INFO - Similarity stats: range=0.30160149931907654, variance=0.007646466605365276, std_dev=0.08744407445192337
+2025-03-05 07:55:57,187 - __main__ - INFO - Similarity stats: range=0.377957820892334, variance=0.010365338064730167, std_dev=0.10181030631065369
+2025-03-05 07:55:57,190 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 2ETjH5CEwRWKUqct
+2025-03-05 08:10:24,890 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=2t0K9pv8NxvYWh42
+2025-03-05 08:10:24,898 - __main__ - INFO - Similarity stats: range=0.5294840931892395, variance=0.015070926398038864, std_dev=0.12276370078325272
+2025-03-05 08:10:24,900 - __main__ - INFO - Similarity stats: range=0.9747097492218018, variance=0.20495930314064026, std_dev=0.45272430777549744
+2025-03-05 08:10:24,902 - __main__ - INFO - Similarity stats: range=0.9757663011550903, variance=0.17818062007427216, std_dev=0.42211446166038513
+2025-03-05 08:10:24,905 - __main__ - INFO - Similarity stats: range=0.9747097492218018, variance=0.03545738011598587, std_dev=0.18830129504203796
+2025-03-05 08:10:24,907 - __main__ - INFO - Similarity stats: range=1.083195447921753, variance=0.06461207568645477, std_dev=0.25418904423713684
+2025-03-05 08:10:24,909 - __main__ - INFO - Similarity stats: range=1.0025320053100586, variance=0.09756051003932953, std_dev=0.31234678626060486
+2025-03-05 08:10:24,914 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 2t0K9pv8NxvYWh42
+2025-03-05 08:19:52,873 - __main__ - INFO - Received request with keywords: ['Bitcoin', 'Ethereum', 'Blockchain', 'Cryptocurrency', 'DeFi', 'NFT', 'Wallet', 'Mining', 'Altcoin', 'Token', 'Exchange', 'Smart Contract', 'Ripple', 'Stablecoin', 'Ledger', 'Hashrate', 'Decentralized', 'ICO', 'Staking', 'Crypto Trading']
+2025-03-05 08:19:52,880 - __main__ - INFO - Similarity stats: range=0.47264325618743896, variance=0.0068729049526154995, std_dev=0.08290298283100128
+2025-03-05 08:19:52,880 - __main__ - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.47264325618743896, 'variance': 0.0068729049526154995, 'std_dev': 0.08290298283100128}
+2025-03-05 08:22:31,270 - __main__ - INFO - Received request with keywords: ['Dating', 'Relationship', 'Love', 'Matchmaking', 'Online Dating', 'Romance', 'Flirting', 'Date Night', 'Singles', 'Compatibility']
+2025-03-05 08:22:31,277 - __main__ - INFO - Similarity stats: range=0.39765623211860657, variance=0.008765766397118568, std_dev=0.09362567216157913
+2025-03-05 08:22:31,277 - __main__ - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.39765623211860657, 'variance': 0.008765766397118568, 'std_dev': 0.09362567216157913}
+2025-03-05 08:26:57,795 - __main__ - INFO - Received request with keywords: ['EnglishSpeaking', 'Pronunciation', 'Fluency', 'Conversation', 'Vocabulary', 'Accent', 'Practice', 'LanguageExchange', 'SpeakingSkills', 'EnglishTutor']
+2025-03-05 08:26:57,804 - __main__ - INFO - Similarity stats: range=0.3440198600292206, variance=0.00917984452098608, std_dev=0.09581150859594345
+2025-03-05 08:26:57,804 - __main__ - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.3440198600292206, 'variance': 0.00917984452098608, 'std_dev': 0.09581150859594345}
+2025-03-05 08:28:33,069 - __main__ - INFO - Received request with keywords: ['Dating', 'Relationship', 'Love', 'Matchmaking', 'OnlineDating', 'Romance', 'Flirting', 'DateNight', 'Singles', 'Compatibility']
+2025-03-05 08:28:33,072 - __main__ - INFO - Similarity stats: range=0.39765623211860657, variance=0.008765766397118568, std_dev=0.09362567216157913
+2025-03-05 08:28:33,072 - __main__ - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.39765623211860657, 'variance': 0.008765766397118568, 'std_dev': 0.09362567216157913}
+2025-03-05 08:30:53,254 - __main__ - INFO - Received request with keywords: ['Football', 'Basketball', 'Tennis', 'Running', 'Swimming', 'Gym', 'Soccer', 'Fitness', 'Yoga', 'Marathon']
+2025-03-05 08:30:53,261 - __main__ - INFO - Similarity stats: range=0.6529380083084106, variance=0.027452878654003143, std_dev=0.16568909585475922
+2025-03-05 08:30:53,261 - __main__ - INFO - Returning response: feature_vector_length=300, similarity_stats={'range': 0.6529380083084106, 'variance': 0.027452878654003143, 'std_dev': 0.16568909585475922}
+2025-03-05 08:45:48,971 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=2t0K9pv8NxvYWh42
+2025-03-05 08:45:48,980 - __main__ - INFO - Similarity stats: range=0.6149460077285767, variance=0.014038077555596828, std_dev=0.11848239600658417
+2025-03-05 08:45:48,983 - __main__ - INFO - Similarity stats: range=0.8394627571105957, variance=0.045823004096746445, std_dev=0.21406307816505432
+2025-03-05 08:45:48,986 - __main__ - INFO - Similarity stats: range=0.8680272102355957, variance=0.04592270776629448, std_dev=0.21429583430290222
+2025-03-05 08:45:48,989 - __main__ - INFO - Similarity stats: range=0.7514419555664062, variance=0.022430434823036194, std_dev=0.1497679352760315
+2025-03-05 08:45:48,992 - __main__ - INFO - Similarity stats: range=1.0835120677947998, variance=0.028978656977415085, std_dev=0.1702311933040619
+2025-03-05 08:45:48,995 - __main__ - INFO - Similarity stats: range=1.0732730627059937, variance=0.022820506244897842, std_dev=0.15106457471847534
+2025-03-05 08:45:49,001 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 2t0K9pv8NxvYWh42
+2025-03-05 08:45:53,652 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=2q0b0ha1QHF9sKgz
+2025-03-05 08:45:53,656 - __main__ - INFO - Similarity stats: range=0.5617384314537048, variance=0.008494985289871693, std_dev=0.09216824173927307
+2025-03-05 08:45:53,658 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 2q0b0ha1QHF9sKgz
+2025-03-05 08:50:34,498 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=2dz704LWOmg0A7ib
+2025-03-05 08:50:34,507 - __main__ - INFO - Similarity stats: range=0.6166862845420837, variance=0.01156915444880724, std_dev=0.10756000131368637
+2025-03-05 08:50:34,509 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 2dz704LWOmg0A7ib
+2025-03-05 08:57:29,424 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=2GrEAv52BRvusDFF
+2025-03-05 08:57:29,432 - __main__ - INFO - Similarity stats: range=0.8373855948448181, variance=0.010536238551139832, std_dev=0.10264617949724197
+2025-03-05 08:57:29,435 - __main__ - INFO - Similarity stats: range=0.6102365255355835, variance=0.01269773580133915, std_dev=0.1126842275261879
+2025-03-05 08:57:29,438 - __main__ - INFO - Similarity stats: range=0.5754956007003784, variance=0.009869133122265339, std_dev=0.09934350848197937
+2025-03-05 08:57:29,441 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 2GrEAv52BRvusDFF
+2025-03-05 09:01:02,765 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=RK2mbWMWulX2tls9
+2025-03-05 09:01:02,774 - __main__ - INFO - Similarity stats: range=0.7985637784004211, variance=0.013327467255294323, std_dev=0.11544465273618698
+2025-03-05 09:01:02,777 - __main__ - INFO - Similarity stats: range=0.6792215704917908, variance=0.02333291806280613, std_dev=0.152751162648201
+2025-03-05 09:01:02,779 - __main__ - INFO - Similarity stats: range=0.4893866777420044, variance=0.010807945393025875, std_dev=0.1039612665772438
+2025-03-05 09:01:02,782 - __main__ - INFO - Similarity stats: range=0.7985637784004211, variance=0.01793402060866356, std_dev=0.13391795754432678
+2025-03-05 09:01:02,784 - __main__ - INFO - Similarity stats: range=0.7985637784004211, variance=0.020243637263774872, std_dev=0.14228013157844543
+2025-03-05 09:01:02,787 - __main__ - INFO - Similarity stats: range=0.7985637784004211, variance=0.01588071882724762, std_dev=0.1260187178850174
+2025-03-05 09:01:02,790 - __main__ - INFO - Similarity stats: range=0.7461003065109253, variance=0.014308322221040726, std_dev=0.11961740255355835
+2025-03-05 09:01:02,792 - __main__ - INFO - Similarity stats: range=0.6449335217475891, variance=0.013839565217494965, std_dev=0.11764167994260788
+2025-03-05 09:01:02,795 - __main__ - INFO - Similarity stats: range=0.8451494574546814, variance=0.025397375226020813, std_dev=0.15936553478240967
+2025-03-05 09:01:02,802 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: RK2mbWMWulX2tls9
+2025-03-05 09:02:13,135 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=j5INqzo5dXs8N2j0
+2025-03-05 09:02:13,138 - __main__ - INFO - Similarity stats: range=0.563752293586731, variance=0.00835833977907896, std_dev=0.09142395853996277
+2025-03-05 09:02:13,141 - __main__ - INFO - Similarity stats: range=0.5097848176956177, variance=0.00915046501904726, std_dev=0.0956580638885498
+2025-03-05 09:02:13,144 - __main__ - INFO - Similarity stats: range=0.6999704241752625, variance=0.01702580414712429, std_dev=0.1304829716682434
+2025-03-05 09:02:13,147 - __main__ - INFO - Similarity stats: range=0.9392820596694946, variance=0.016967134550213814, std_dev=0.13025794923305511
+2025-03-05 09:02:13,150 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: j5INqzo5dXs8N2j0
+2025-03-05 09:28:52,552 - __main__ - INFO - Consumed message from Kafka topic keywords-to-vectors: doc_id=69CsIqkGA3F6EV4V
+2025-03-05 09:28:52,560 - __main__ - INFO - Similarity stats: range=1.1008222103118896, variance=0.014924431219696999, std_dev=0.12216559052467346
+2025-03-05 09:28:52,563 - __main__ - INFO - Similarity stats: range=0.4042195975780487, variance=0.00656296219676733, std_dev=0.08101211488246918
+2025-03-05 09:28:52,565 - __main__ - INFO - Similarity stats: range=0.4291970133781433, variance=0.006253787316381931, std_dev=0.07908089458942413
+2025-03-05 09:28:52,568 - __main__ - INFO - Similarity stats: range=0.5242186188697815, variance=0.008187959901988506, std_dev=0.09048734605312347
+2025-03-05 09:28:52,571 - __main__ - INFO - Similarity stats: range=0.5154998302459717, variance=0.007555073592811823, std_dev=0.08691992610692978
+2025-03-05 09:28:52,573 - __main__ - INFO - Similarity stats: range=1.1008222103118896, variance=0.024593845009803772, std_dev=0.1568242460489273
+2025-03-05 09:28:52,575 - __main__ - INFO - Similarity stats: range=0.5587896704673767, variance=0.012292206287384033, std_dev=0.11087021976709366
+2025-03-05 09:28:52,581 - __main__ - INFO - Processed and sent to Kafka topic vectors-to-summary: 69CsIqkGA3F6EV4V
+2025-03-06 02:33:57,567 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-06 02:33:57,569 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-03-06 02:33:57,569 - kafka.conn - ERROR - Connect attempt to <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]> returned error 111. Disconnecting.
+2025-03-06 02:33:57,570 - kafka.conn - ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-03-06 02:33:57,571 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: connecting to 192.168.1.206:9092 [('192.168.1.206', 9092) IPv4]
+2025-03-06 02:33:57,571 - kafka.conn - ERROR - Connect attempt to <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]> returned error 111. Disconnecting.
+2025-03-06 02:33:57,572 - kafka.conn - ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=192.168.1.206:9092 <connecting> [IPv4 ('192.168.1.206', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED

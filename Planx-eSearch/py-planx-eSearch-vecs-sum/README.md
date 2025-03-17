@@ -1,0 +1,1 @@
+nohup python main_with_kafka.py > logs/app.log 2>&1 &
