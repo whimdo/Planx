@@ -45,6 +45,7 @@ if crawler_logger.handlers:  # 清除已有处理器，避免重复日志
 handler = logging.FileHandler(os.path.join(LOG_DIR, "crawler.log"), encoding='utf-8')
 handler.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
 crawler_logger.addHandler(handler)
+crawler_logger.propagate = False  # 禁用传播
 
 # 创建 Telegram 客户端
 async def join_and_fetch_group_info(client, group_url, messageNum: int = None, logger=None):
@@ -103,9 +104,8 @@ async def join_and_fetch_group_info(client, group_url, messageNum: int = None, l
                         crawler_logger.info(f"模拟用户阅读，暂停 {pause_time} 秒")
                         await asyncio.sleep(pause_time)
                 except FloodWaitError as e:
-                    wait_time = e.seconds or random.uniform(*RATE_LIMIT_CONFIG["RETRY_DELAY"])
-                    crawler_logger.warning(f"FloodWaitError: 等待 {wait_time} 秒")
-                    await asyncio.sleep(wait_time)
+                    crawler_logger.warning(f"get_messages&FloodWaitError: {e} ")
+                    raise
             filtered_messages = [msg.text for msg in all_messages if msg.text]
             messages_str = " ".join(filtered_messages)
         else:
@@ -133,9 +133,8 @@ async def join_and_fetch_group_info(client, group_url, messageNum: int = None, l
                         crawler_logger.info(f"模拟用户阅读，暂停 {pause_time} 秒")
                         await asyncio.sleep(pause_time)
                 except FloodWaitError as e:
-                    wait_time = e.seconds or random.uniform(*RATE_LIMIT_CONFIG["RETRY_DELAY"])
-                    crawler_logger.warning(f"FloodWaitError: 等待 {wait_time} 秒")
-                    await asyncio.sleep(wait_time)
+                    crawler_logger.warning(f"get_messages&FloodWaitError: {e} ")
+                    raise
             messages_str = " ".join([msg.text for msg in all_messages if msg.text])
 
         avatar_base64 = None
@@ -172,11 +171,15 @@ async def join_and_fetch_group_info(client, group_url, messageNum: int = None, l
 
         return result1
 
+    except FloodWaitError as e:
+        wait_time = e.seconds
+        crawler_logger.warning(f"FloodWaitError in join_and_fetch_group_info: 等待 {wait_time} 秒")
+        raise  # 重新抛出 FloodWaitError，让 worker 捕获
     except Exception as e:
         crawler_logger.error(f"处理 {group_url} 失败: {e}")
         return None
 
-def split_content_into_blocks(data, max_block_size=7000, logger=None):
+def split_content_into_blocks(data, max_block_size=5000, logger=None):
     # 使用固定的 crawler_logger
     input_doc_id = data.get("doc_id", "")
     content = data.get("content", "")
