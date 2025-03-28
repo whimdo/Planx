@@ -118,7 +118,7 @@ class TelegramPool:
                     break
 
                 logger.info(f"Processing {url} with {session_file} (phone: {phone_number})")
-                crawl_result = await join_and_fetch_group_info(client, url, None, logger=logger)
+                crawl_result = await join_and_fetch_group_info(client,phone_number, url, None, logger=logger)
                 if "doc_id" not in crawl_result or not crawl_result["doc_id"]:
                     logger.error("爬取结果中 doc_id 为空")
                     
@@ -131,7 +131,7 @@ class TelegramPool:
                         "content": crawl_result["content"],
                         "max_block_size": 5000
                     }
-                    split_content_into_blocks(split_data, logger=logger)
+                    split_content_into_blocks(split_data, phone_number,logger=logger)
                     logger.info(f"Successfully processed {url}")
                 else:
                     logger.error(f"Failed to process {url}")
@@ -144,6 +144,9 @@ class TelegramPool:
             # 交给 Monitor 管理等待
             self.wait_queue.put((session_file, wait_time))
             return  # 立即终止进程
+        except asyncio.TimeoutError as e:
+            logger.error(f"Timeout in worker {session_file}: {e}")
+            self.pool.put(session_file)  # 放回池中以便重试
         except Exception as e:
             logger.error(f"Error in worker {session_file}: {e}")
             self.pool.put(session_file)

@@ -8,6 +8,7 @@ import logging
 import base64
 from io import BytesIO
 from telethon import TelegramClient
+from asyncio import TimeoutError
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest, GetHistoryRequest
 from telethon.errors import UserAlreadyParticipantError, FloodWaitError
@@ -22,7 +23,6 @@ from config import (
     MONGO_HOST, MONGO_PORT, MONGO_DB, MONGO_COLLECTION,
 )
 
-# 时间频率设置（集中管理，添加随机性）
 RATE_LIMIT_CONFIG = {
     "REQUEST_INTERVAL": (3.0, 7.0),    # 随机 3-7 秒
     "MESSAGE_BATCH_SIZE": (20, 50),     # 随机 20-50 条
@@ -48,7 +48,7 @@ crawler_logger.addHandler(handler)
 crawler_logger.propagate = False  # 禁用传播
 
 # 创建 Telegram 客户端
-async def join_and_fetch_group_info(client, group_url, messageNum: int = None, logger=None):
+async def join_and_fetch_group_info(client, phonenumber, group_url, messageNum: int = None, logger=None):
     # 使用固定的 crawler_logger，而不是传入的 logger
     try:
         crawler_logger.info("已成功登录")
@@ -58,42 +58,62 @@ async def join_and_fetch_group_info(client, group_url, messageNum: int = None, l
         group_handle = None
         if '/+' in group_url:
             invite_hash = group_url.split('/+')[1]
-            crawler_logger.debug(f"处理私密邀请链接: hash={invite_hash}")
+            crawler_logger.debug(f"{phonenumber}处理私密邀请链接: hash={invite_hash}")
             try:
-                updates = await client(ImportChatInviteRequest(invite_hash))
+                # 添加超时：加入私密群组
+                updates = await asyncio.wait_for(
+                    client(ImportChatInviteRequest(invite_hash)),
+                    timeout=30  # 30秒超时
+                )
                 group_entity = updates.chats[0]
-                crawler_logger.info(f"通过邀请链接成功加入群组: {invite_hash}")
+                crawler_logger.info(f"{phonenumber}通过邀请链接成功加入群组: {invite_hash}")
             except UserAlreadyParticipantError:
-                crawler_logger.info(f"用户已加入群组，尝试直接获取实体")
-                group_entity = await client.get_entity(invite_hash)
+                crawler_logger.info(f"{phonenumber}用户已加入群组，尝试直接获取实体")
+                # 添加超时：获取群组实体
+                group_entity = await asyncio.wait_for(
+                    client.get_entity(invite_hash),
+                    timeout=30  # 30秒超时
+                )
             group_handle = group_entity.username or f"private_{invite_hash[:8]}"
         else:
             group_handle = group_url.split('t.me/')[-1].strip('/')
-            crawler_logger.debug(f"处理公开链接: @{group_handle}")
-            group_entity = await client.get_entity('@' + group_handle)
-            crawler_logger.info(f"获取群组实体成功: {group_handle}")
+            crawler_logger.debug(f"{phonenumber}处理公开链接: @{group_handle}")
+            # 添加超时：获取公开群组实体
+            group_entity = await asyncio.wait_for(
+                client.get_entity('@' + group_handle),
+                timeout=30  # 30秒超时
+            )
+            crawler_logger.info(f"{phonenumber}获取群组实体成功: {group_handle}")
 
         await asyncio.sleep(random.uniform(*RATE_LIMIT_CONFIG["JOIN_GROUP_DELAY"]))
-        crawler_logger.info(f"已成功加入 {group_handle}")
+        crawler_logger.info(f"{phonenumber}已成功加入 {group_handle}")
 
         group_type = "channel" if group_entity.broadcast else "group"
         group_name = group_entity.title
-        full_channel = await client(GetFullChannelRequest(channel=group_entity))
+        # 添加超时：获取群组完整信息
+        full_channel = await asyncio.wait_for(
+            client(GetFullChannelRequest(channel=group_entity)),
+            timeout=30  # 30秒超时
+        )
         member_count = full_channel.full_chat.participants_count
         await asyncio.sleep(random.uniform(*RATE_LIMIT_CONFIG["REQUEST_INTERVAL"]))
 
         messages_str = ""
         if messageNum is not None:
-            crawler_logger.info(f"获取指定数量消息: {messageNum}")
+            crawler_logger.info(f"{phonenumber}获取指定数量消息: {messageNum}")
             remaining = min(messageNum, RATE_LIMIT_CONFIG["MAX_MESSAGES_PER_REQUEST"] * 4)
             offset_id = 0
             all_messages = []
             while remaining > 0:
                 batch_size = min(remaining, random.randint(*RATE_LIMIT_CONFIG["MESSAGE_BATCH_SIZE"]))
                 try:
-                    messages = await client.get_messages(group_entity, limit=batch_size, offset_id=offset_id)
+                    # 添加超时：获取消息
+                    messages = await asyncio.wait_for(
+                        client.get_messages(group_entity, limit=batch_size, offset_id=offset_id),
+                        timeout=60  # 60秒超时（消息可能较慢）
+                    )
                     if not messages:
-                        crawler_logger.info("没有更多消息可获取")
+                        crawler_logger.info(f"{phonenumber}没有更多消息可获取")
                         break
                     all_messages.extend(messages)
                     offset_id = messages[-1].id
@@ -101,15 +121,15 @@ async def join_and_fetch_group_info(client, group_url, messageNum: int = None, l
                     await asyncio.sleep(random.uniform(*RATE_LIMIT_CONFIG["BATCH_INTERVAL"]))
                     if random.random() < 0.05:
                         pause_time = random.uniform(30.0, 60.0)
-                        crawler_logger.info(f"模拟用户阅读，暂停 {pause_time} 秒")
+                        crawler_logger.info(f"{phonenumber}模拟用户阅读，暂停 {pause_time} 秒")
                         await asyncio.sleep(pause_time)
                 except FloodWaitError as e:
-                    crawler_logger.warning(f"get_messages&FloodWaitError: {e} ")
+                    crawler_logger.warning(f"{phonenumber}get_messages&FloodWaitError: {e}")
                     raise
             filtered_messages = [msg.text for msg in all_messages if msg.text]
             messages_str = " ".join(filtered_messages)
         else:
-            crawler_logger.info("未指定消息数量，获取直到 15000 字符或 200 条")
+            crawler_logger.info(f"{phonenumber}未指定消息数量，获取直到 15000 字符或 200 条")
             total_length = 0
             offset_id = 0
             all_messages = []
@@ -117,35 +137,44 @@ async def join_and_fetch_group_info(client, group_url, messageNum: int = None, l
             while total_length <= 15000 and len(all_messages) < max_messages:
                 batch_size = random.randint(*RATE_LIMIT_CONFIG["MESSAGE_BATCH_SIZE"])
                 try:
-                    messages = await client.get_messages(group_entity, limit=batch_size, offset_id=offset_id)
+                    # 添加超时：获取消息
+                    messages = await asyncio.wait_for(
+                        client.get_messages(group_entity, limit=batch_size, offset_id=offset_id),
+                        timeout=60  # 60秒超时
+                    )
                     if not messages:
-                        crawler_logger.info("已获取所有消息，停止轮询")
+                        crawler_logger.info(f"{phonenumber}已获取所有消息，停止轮询")
                         break
                     filtered_messages = [msg.text for msg in messages if msg.text]
                     batch_text = " ".join(filtered_messages)
                     all_messages.extend(messages)
                     total_length += len(batch_text)
                     offset_id = messages[-1].id
-                    crawler_logger.debug(f"当前消息总长度: {total_length}")
+                    crawler_logger.debug(f"{phonenumber}当前消息总长度: {total_length}")
                     await asyncio.sleep(random.uniform(*RATE_LIMIT_CONFIG["BATCH_INTERVAL"]))
                     if random.random() < 0.05:
                         pause_time = random.uniform(30.0, 60.0)
-                        crawler_logger.info(f"模拟用户阅读，暂停 {pause_time} 秒")
+                        crawler_logger.info(f"{phonenumber}模拟用户阅读，暂停 {pause_time} 秒")
                         await asyncio.sleep(pause_time)
                 except FloodWaitError as e:
-                    crawler_logger.warning(f"get_messages&FloodWaitError: {e} ")
+                    crawler_logger.warning(f"{phonenumber}get_messages&FloodWaitError: {e}")
                     raise
             messages_str = " ".join([msg.text for msg in all_messages if msg.text])
 
         avatar_base64 = None
         try:
-            avatar_bytes = await client.download_profile_photo(group_entity, file=BytesIO())
+            # 添加超时：下载群组头像
+            avatar_bytes = await asyncio.wait_for(
+                client.download_profile_photo(group_entity, file=BytesIO()),
+                timeout=30  # 30秒超时
+            )
             if avatar_bytes:
                 avatar_bytes.seek(0)
                 avatar_base64 = base64.b64encode(avatar_bytes.read()).decode('utf-8')
-                crawler_logger.info("成功获取群组头像并转换为 Base64")
+                crawler_logger.info(f"{phonenumber}成功获取群组头像并转换为 Base64")
         except Exception as e:
-            crawler_logger.warning(f"获取头像失败: {e}")
+            crawler_logger.warning(f"{phonenumber}获取头像失败: {e}")
+            raise
 
         keyid = url_to_unique_id(normalize_url(group_url), 17)
         result = {
@@ -167,24 +196,27 @@ async def join_and_fetch_group_info(client, group_url, messageNum: int = None, l
         mongo = MongoDBHandler(host=MONGO_HOST, port=MONGO_PORT, database=MONGO_DB, collection=MONGO_COLLECTION)
         del result["messages"]
         mongo.insert_data(result)
+        crawler_logger.info(f"{phonenumber}  成功插入mongo")
         mongo.close()
-
         return result1
 
     except FloodWaitError as e:
         wait_time = e.seconds
-        crawler_logger.warning(f"FloodWaitError in join_and_fetch_group_info: 等待 {wait_time} 秒")
+        crawler_logger.warning(f"{phonenumber}FloodWaitError in join_and_fetch_group_info: 等待 {wait_time} 秒")
         raise  # 重新抛出 FloodWaitError，让 worker 捕获
+    except TimeoutError as e:
+        crawler_logger.error(f"{phonenumber}操作超时: {group_url}")
+        raise  # 抛出超时错误给外部
     except Exception as e:
-        crawler_logger.error(f"处理 {group_url} 失败: {e}")
-        return None
+        crawler_logger.error(f"{phonenumber}处理 {group_url} 失败: {e}")
+        raise
 
-def split_content_into_blocks(data, max_block_size=5000, logger=None):
+def split_content_into_blocks(data,phonenumber, max_block_size=5000, logger=None):
     # 使用固定的 crawler_logger
     input_doc_id = data.get("doc_id", "")
     content = data.get("content", "")
     if not content:
-        crawler_logger.info(f"No content to split for doc_id: {input_doc_id}")
+        crawler_logger.info(f"{phonenumber}No content to split for doc_id: {input_doc_id}")
         return {"doc_id": input_doc_id, "total_blocks": 0, "blocks": []}
     blocks = []
     block_id = 1
@@ -193,11 +225,17 @@ def split_content_into_blocks(data, max_block_size=5000, logger=None):
         blocks.append({"block_id": block_id, "content": block_content})
         block_id += 1
     result = {"doc_id": input_doc_id, "total_blocks": block_id - 1, "blocks": blocks}
-    kafka = KafkaClient()
-    kafka.initialize_producer()
-    kafka.send_message(KafkaConfig.KAFKA_TOPIC_DOCUMENT_TO_KEYWORDS, result)
-    kafka.close()
-    return result
+    try:
+        kafka = KafkaClient()
+        kafka.initialize_producer()
+        crawler_logger.info(f"{phonenumber}initialize kafka_producer")
+        kafka.send_message(KafkaConfig.KAFKA_TOPIC_DOCUMENT_TO_KEYWORDS, result)
+        crawler_logger.info(f"{phonenumber}send message successfully")
+        kafka.close()
+        return result
+    except:
+        crawler_logger.error(f"{phonenumber}faild to handle kafka")
+        raise
 
 
 async def main():

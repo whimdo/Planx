@@ -5,7 +5,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 class MongoDBHandler:
-    def __init__(self, host='192.168.1.204', port=27017, database='telegram', collection='groupinfo'):
+    def __init__(self, host='192.168.6.188', port=27017, database='planx', collection='telegroups'):
         """初始化 MongoDB 客户端"""
         try:
             self.client = MongoClient(host, port)
@@ -62,7 +62,64 @@ class MongoDBHandler:
             logger.error(f"查询失败: doc_id={doc_id}, 错误: {e}")
             raise
 
+    def find_url_by_name(self, name: str) -> str:
+        """
+            根据 name 查询 MongoDB 并返回对应的 URL。
+
+            参数:
+                name (str): 要查询的名称字段
+
+            返回:
+                str: 匹配的 URL，若未找到则返回 None
+        """
+        try:
+            logger.info(f"开始查询: name={name}")
+            # 查询集合，使用 name 字段匹配
+            document = self.collection.find_one({"name": name})
+
+            if document and "url" in document:
+                url = document["url"]
+                logger.info(f"查询成功: name={name}, URL={url}")
+                return url
+            else:
+                logger.warning(f"未找到匹配的 URL: name={name}")
+                return None  # 或抛出异常
+        except Exception as e:
+            logger.error(f"查询失败: name={name}, 错误: {e}")
+            raise
+    
+    def find_url_by_doc_id(self, doc_id: str) -> str:
+        """
+            根据 doc_id 查询 MongoDB 并返回对应的 URL。
+
+            参数:
+                doc_id (str): 要查询的文档 ID 字段
+
+            返回:
+                str: 匹配的 URL，若未找到则返回 None
+        """
+        try:
+            logger.info(f"开始查询: doc_id={doc_id}")
+            # 查询集合，使用 doc_id 字段匹配
+            document = self.collection.find_one({"doc_id": doc_id})
+
+            if document and "url" in document:
+                url = document["url"]
+                logger.info(f"查询成功: doc_id={doc_id}, URL={url}")
+                return url
+            else:
+                logger.warning(f"未找到匹配的 URL: doc_id={doc_id}")
+                return None  # 或抛出异常
+        except Exception as e:
+            logger.error(f"查询失败: doc_id={doc_id}, 错误: {e}")
+            raise
+        
     def close(self):
         """关闭 MongoDB 连接"""
-        self.client.close()
-        logger.info("MongoDB 连接已关闭")
+        try:
+            self.client.close()
+            logger.info("MongoDB 连接已关闭")
+        except:
+            logger.error("MongoDB连接关闭失败")
+            raise
+    

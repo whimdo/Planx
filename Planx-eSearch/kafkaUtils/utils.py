@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class KafkaClient:
-    def __init__(self, bootstrap_servers='192.168.1.206:9092'):
+    def __init__(self, bootstrap_servers='192.168.6.188:9092'):
         """
         初始化 Kafka 客户端
         :param bootstrap_servers: Kafka 服务器地址，默认为
@@ -46,6 +46,7 @@ class KafkaClient:
             logger.info(f"Topic '{topic_name}' created successfully.")
         except KafkaError as e:
             logger.error(f"Failed to create topic '{topic_name}': {e}")
+            raise
 
     def initialize_producer(self, value_serializer=lambda x: json.dumps(x).encode('utf-8')):
         """
@@ -221,33 +222,37 @@ class KafkaClient:
 
     def close(self):
         """关闭生产者和消费者连接"""
-        logger.info("Closing all Kafka connections...")
-        # 停止 monitor_topic（如果正在运行）
-        if self._monitoring:
-            self.stop_monitoring()
-            # 等待 monitor_topic 的 finally 块执行完成
-            import time
-            time.sleep(1)  # 短暂等待，确保消费者关闭
+        try:
+            logger.info("Closing all Kafka connections...")
+            # 停止 monitor_topic（如果正在运行）
+            if self._monitoring:
+                self.stop_monitoring()
+                # 等待 monitor_topic 的 finally 块执行完成
+                import time
+                time.sleep(1)  # 短暂等待，确保消费者关闭
 
-        # 关闭生产者
-        if self.producer:
-            self.producer.close()
-            self.producer = None
-            logger.info("Kafka Producer closed.")
+            # 关闭生产者
+            if self.producer:
+                self.producer.close()
+                self.producer = None
+                logger.info("Kafka Producer closed.")
 
-        # 关闭消费者
-        if self.consumer:
-            self.consumer.close()
-            self.consumer = None
-            logger.info("Kafka Consumer closed.")
+            # 关闭消费者
+            if self.consumer:
+                self.consumer.close()
+                self.consumer = None
+                logger.info("Kafka Consumer closed.")
 
-        # 关闭 Admin 客户端
-        if self.admin_client:
-            self.admin_client.close()
-            self.admin_client = None
-            logger.info("Kafka Admin Client closed.")
+            # 关闭 Admin 客户端
+            if self.admin_client:
+                self.admin_client.close()
+                self.admin_client = None
+                logger.info("Kafka Admin Client closed.")
 
-        logger.info("All Kafka connections closed.")
+            logger.info("All Kafka connections closed.")
+        except:
+            logger.error("All Kafka connections failed to close.")
+            raise
 
 # 使用示例
 if __name__ == "__main__":
