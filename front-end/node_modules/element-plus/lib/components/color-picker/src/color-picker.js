@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var lodashUnified = require('lodash-unified');
 var runtime = require('../../../utils/vue/props/runtime.js');
 var index = require('../../../hooks/use-size/index.js');
-var content = require('../../tooltip/src/content2.js');
+var content = require('../../tooltip/src/content.js');
 var index$1 = require('../../../hooks/use-aria/index.js');
 var event = require('../../../constants/event.js');
 var shared = require('@vue/shared');
